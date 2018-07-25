@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+  xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  
+  <url>
+    <loc>https://evanwaldmann.com/post/about/</loc>
+  </url>
+  
+  <url>
+    <loc>https://evanwaldmann.com/post/research/</loc>
+  </url>
+  
+  <url>
+    <loc>https://evanwaldmann.com/post/projects/</loc>
+  </url>
+  
+  <url>
+    <loc>https://evanwaldmann.com/categories/</loc>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://evanwaldmann.com/</loc>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://evanwaldmann.com/post/</loc>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://evanwaldmann.com/tags/</loc>
+    <priority>0</priority>
+  </url>
+  
+</urlset>

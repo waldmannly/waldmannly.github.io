@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Posts on Evan Waldmann</title>
+    <link>https://evanwaldmann.com/post/</link>
+    <description>Recent content in Posts on Evan Waldmann</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-US</language>
+    
+	<atom:link href="https://evanwaldmann.com/post/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>About Me</title>
+      <link>https://evanwaldmann.com/post/about/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://evanwaldmann.com/post/about/</guid>
+      <description>Test about interests. More text. Examples stuff
+Even more stuff Link to CV
+linkedin instagram</description>
+    </item>
+    
+    <item>
+      <title>Research</title>
+      <link>https://evanwaldmann.com/post/research/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://evanwaldmann.com/post/research/</guid>
+      <description>Test about interests. More text. Examples stuff
+Even more stuff Link to CV
+linkedin instagram</description>
+    </item>
+    
+    <item>
+      <title>Projects</title>
+      <link>https://evanwaldmann.com/post/projects/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://evanwaldmann.com/post/projects/</guid>
+      <description>Test about interests. More text. Examples stuff
+Even more stuff Link to CV
+linkedin instagram</description>
+    </item>
+    
+  </channel>
+</rss>
