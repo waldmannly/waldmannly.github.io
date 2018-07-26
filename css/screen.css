@@ -1508,39 +1508,39 @@ body:not(.post-template) .post-title {
     /* color: rgba(255,255,255,0.7); */
 }
 
-@media only screen and (max-width: 500px) {
+@media only screen and (max-width: 700px) {
 
   .vertical {
       display: table-cell;
       position: relative;
-      top: 75%;
-      transform: translateY(25%);
+      top: 85%;
+      transform: translateY(15%);
   }
 
   .page-title {
       margin: 10px 0 10px 0;
       font-size: 7vw;
       letter-spacing: -1px;
-      font-weight: 700;
+      font-weight: 500;
       font-family: "Open Sans", sans-serif;
       color: #fff;
   }
 
   .page-description {
-      margin: 10;
+      margin: 0;
       font-size:  5vw;
       line-height: .5vw;
-      font-weight: 800;
+      font-weight: 400;
       font-family: "Merriweather", serif;
       letter-spacing: 1px;
       color: rgba(255,255,255,.85);
   }
 
   .page-subdescription {
-      margin: 10;
+      margin: 0;
       font-size:  3vw;
       line-height:  .5vw;
-      font-weight: 600;
+      font-weight: 300;
       font-family: "Merriweather", serif;
       letter-spacing: 1px;
       color: rgba(255,255,255,0.8);
