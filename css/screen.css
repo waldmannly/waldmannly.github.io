@@ -1674,7 +1674,7 @@ body:not(.post-template) .post-title {
 
     .main-header {
         margin-bottom: 0px;
-        height: 40vh;
+        height: 30vh;
     }
 
     .no-cover.main-header {
@@ -1746,7 +1746,7 @@ body:not(.post-template) .post-title {
     }
 
     .nav ul {
-        padding: 40px 9% 5%;
+        padding: 40px 5% 5%;
     }
 
     .inner,
@@ -1759,10 +1759,10 @@ body:not(.post-template) .post-title {
         width: 100%;
         max-width: 100%;
         width: auto;
-        margin-top: 8rem;
-        margin-bottom: 2rem;
-        margin-left: 16px;
-        margin-right: 16px;
+        margin-top: 0rem;
+        margin-bottom: 0rem;
+        margin-left: 8px;
+        margin-right: 8px;
         padding-bottom: 1rem;
         line-height: 1.65em;
     }
