@@ -1529,20 +1529,20 @@ body:not(.post-template) .post-title {
   .page-description {
       margin: 0;
       font-size:  5vw;
-      line-height: 1vw;
+      line-height: 4vw;
       font-weight: 400;
       font-family: "Merriweather", serif;
-      letter-spacing: 1vw;
+      letter-spacing: 3vw;
       color: rgba(255,255,255,.85);
   }
 
   .page-subdescription {
       margin: 0;
       font-size:  3vw;
-      line-height:  1vw;
+      line-height:  4vw;
       font-weight: 300;
       font-family: "Merriweather", serif;
-      letter-spacing: 1vw;
+      letter-spacing: 3vw;
       color: rgba(255,255,255,0.8);
   }
 }
