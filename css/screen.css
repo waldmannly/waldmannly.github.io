@@ -1668,7 +1668,7 @@ body:not(.post-template) .post-title {
 
     article.post.post {
         background-color: #fff;
-        padding: 20px;
+        padding: 10px;
         margin: 0;
     }
 
@@ -1746,7 +1746,7 @@ body:not(.post-template) .post-title {
     }
 
     .nav ul {
-        padding: 60px 9% 5%;
+        padding: 40px 9% 5%;
     }
 
     .inner,
@@ -1763,7 +1763,7 @@ body:not(.post-template) .post-title {
         margin-bottom: 2rem;
         margin-left: 16px;
         margin-right: 16px;
-        padding-bottom: 2rem;
+        padding-bottom: 1rem;
         line-height: 1.65em;
     }
 
@@ -1789,18 +1789,18 @@ body:not(.post-template) .post-title {
     }*/
 
     .page-title {
-        font-size: 3rem;
+        font-size: 1rem;
     }
 
     .post-excerpt p {
-        font-size: 0.85em;
+        font-size: 0.5em;
     }
 
     .page-description {
-        font-size: 2rem;
+        font-size: .85rem;
     }
     .page-subdescription {
-        font-size: 1.8rem;
+        font-size: .75rem;
     }
     h1, h2, h3,
     h4, h5, h6 {
@@ -1808,12 +1808,12 @@ body:not(.post-template) .post-title {
     }
 
     h1 {
-        font-size: 2.8rem;
+        font-size: 1rem;
         letter-spacing: -1px;
     }
 
     h2 {
-        font-size: 2.4rem;
+        font-size: .8rem;
         letter-spacing: 0;
         margin: 1em 0 1em 0;
     }
@@ -1827,11 +1827,11 @@ body:not(.post-template) .post-title {
     }
 
     h5 {
-        font-size: 1.8rem;
+        font-size: .75rem;
     }
 
     h6 {
-        font-size: 1.8rem;
+        font-size: .75rem;
     }
 
     body:not(.post-template) .post-title {
