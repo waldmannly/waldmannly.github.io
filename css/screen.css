@@ -467,8 +467,8 @@ margin on the iframe, cause it breaks stuff. */
 .vertical {
     display: table-cell;
     position: relative;
-    top: 75%;
-    transform: translateY(25%);
+    top: 85%;
+    transform: translateY(15%);
 }
 
 /* Wraps the main content & footer */
@@ -860,7 +860,7 @@ body.nav-opened .menu-button .word {
 }
 
 /* The details of your blog. Defined in ghost/settings/ */
-.page-title {
+/*.page-title {
     margin: 10px 0 10px 0;
     font-size: 5rem;
     letter-spacing: -1px;
@@ -871,6 +871,7 @@ body.nav-opened .menu-button .word {
 
 .page-description {
     margin: 10;
+    padding-top: 5vw;
     font-size: 2.75rem;
     line-height: 2em;
     font-weight: 800;
@@ -892,8 +893,37 @@ body.nav-opened .menu-button .word {
     min-height: 160px;
     max-height: 40vh;
     background: #f5f8fa;
+}*/
+.page-title {
+    margin: 10px 0 10px 0;
+    font-size: 5vw;
+    letter-spacing: -1px;
+    font-weight: 800;
+    font-family: "Open Sans", sans-serif;
+    color: #fff;
 }
 
+.page-description {
+    margin: 10;
+    padding-top: 4vw;
+    font-size:  2vw;
+    line-height: 2.5vw;
+    font-weight: 500;
+    font-family: "Merriweather", serif;
+    letter-spacing: .5vw;
+    color: rgba(255,255,255,.85);
+}
+
+.page-subdescription {
+    margin: 10;
+    padding-top: 15vw;
+    font-size:  1.5vw;
+    line-height:  2vw;
+    font-weight: 450;
+    font-family: "Merriweather", serif;
+    letter-spacing: .25vw;
+    color: rgba(255,255,255,0.8);
+}
 .no-cover .page-title {
     color: rgba(0,0,0,0.8);
 }
