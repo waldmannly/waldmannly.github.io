@@ -1519,7 +1519,7 @@ body:not(.post-template) .post-title {
 
   .page-title {
       margin: 10px 0 10px 0;
-      font-size: 7vw;
+      font-size: 9vw;
       letter-spacing: -1px;
       font-weight: 500;
       font-family: "Open Sans", sans-serif;
@@ -1529,20 +1529,20 @@ body:not(.post-template) .post-title {
   .page-description {
       margin: 0;
       font-size:  5vw;
-      line-height: .5vw;
+      line-height: 1vw;
       font-weight: 400;
       font-family: "Merriweather", serif;
-      letter-spacing: 1px;
+      letter-spacing: 1vw;
       color: rgba(255,255,255,.85);
   }
 
   .page-subdescription {
       margin: 0;
       font-size:  3vw;
-      line-height:  .5vw;
+      line-height:  1vw;
       font-weight: 300;
       font-family: "Merriweather", serif;
-      letter-spacing: 1px;
+      letter-spacing: 1vw;
       color: rgba(255,255,255,0.8);
   }
 }
