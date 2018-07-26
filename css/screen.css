@@ -1513,8 +1513,8 @@ body:not(.post-template) .post-title {
   .vertical {
       display: table-cell;
       position: relative;
-      top: 85%;
-      transform: translateY(15%);
+      top: 75%;
+      transform: translateY(25%);
   }
 
   .page-title {
@@ -1528,21 +1528,23 @@ body:not(.post-template) .post-title {
 
   .page-description {
       margin: 10;
+      padding-top: 6vw;
       font-size:  5vw;
-      line-height: 4vw;
-      font-weight: 600;
+      line-height: 5.5vw;
+      font-weight: 500;
       font-family: "Merriweather", serif;
-      letter-spacing: 1vw;
+      letter-spacing: .5vw;
       color: rgba(255,255,255,.85);
   }
 
   .page-subdescription {
       margin: 10;
+      padding-top: 4vw;
       font-size:  3vw;
-      line-height:  4vw;
-      font-weight: 500;
+      line-height:  3.5vw;
+      font-weight: 450;
       font-family: "Merriweather", serif;
-      letter-spacing: 1vw;
+      letter-spacing: .5vw;
       color: rgba(255,255,255,0.8);
   }
 }
