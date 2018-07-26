@@ -468,7 +468,7 @@ margin on the iframe, cause it breaks stuff. */
     display: table-cell;
     position: relative;
     top: 75%;
-    transform: translateY(25%);
+    /*transform: translateY(25%);*/
 }
 
 /* Wraps the main content & footer */
@@ -1668,13 +1668,13 @@ body:not(.post-template) .post-title {
 
     article.post.post {
         background-color: #fff;
-        padding: 10px;
+        padding: 20px;
         margin: 0;
     }
 
     .main-header {
         margin-bottom: 0px;
-        height: 30vh;
+        height: 40vh;
     }
 
     .no-cover.main-header {
@@ -1746,7 +1746,7 @@ body:not(.post-template) .post-title {
     }
 
     .nav ul {
-        padding: 40px 5% 5%;
+        padding: 60px 9% 5%;
     }
 
     .inner,
@@ -1759,11 +1759,11 @@ body:not(.post-template) .post-title {
         width: 100%;
         max-width: 100%;
         width: auto;
-        margin-top: 0rem;
-        margin-bottom: 0rem;
-        margin-left: 8px;
-        margin-right: 8px;
-        padding-bottom: 1rem;
+        margin-top: 8rem;
+        margin-bottom: 2rem;
+        margin-left: 16px;
+        margin-right: 16px;
+        padding-bottom: 2rem;
         line-height: 1.65em;
     }
 
@@ -1789,18 +1789,18 @@ body:not(.post-template) .post-title {
     }*/
 
     .page-title {
-        font-size: 1rem;
+        font-size: 3rem;
     }
 
     .post-excerpt p {
-        font-size: 0.5em;
+        font-size: 0.85em;
     }
 
     .page-description {
-        font-size: .85rem;
+        font-size: 2rem;
     }
     .page-subdescription {
-        font-size: .75rem;
+        font-size: 1.8rem;
     }
     h1, h2, h3,
     h4, h5, h6 {
@@ -1808,12 +1808,12 @@ body:not(.post-template) .post-title {
     }
 
     h1 {
-        font-size: 1rem;
+        font-size: 2.8rem;
         letter-spacing: -1px;
     }
 
     h2 {
-        font-size: .8rem;
+        font-size: 2.4rem;
         letter-spacing: 0;
         margin: 1em 0 1em 0;
     }
@@ -1827,11 +1827,11 @@ body:not(.post-template) .post-title {
     }
 
     h5 {
-        font-size: .75rem;
+        font-size: 1.8rem;
     }
 
     h6 {
-        font-size: .75rem;
+        font-size: 1.8rem;
     }
 
     body:not(.post-template) .post-title {
