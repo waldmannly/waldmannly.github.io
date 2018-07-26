@@ -1511,7 +1511,7 @@ body:not(.post-template) .post-title {
 /* ==========================================================================
    10. Media Queries - Smaller than 900px
    ========================================================================== */
-
+/*
 @media only screen and (max-width: 900px) {
 
     section.post-excerpt {
@@ -1663,12 +1663,11 @@ body:not(.post-template) .post-title {
 /* ==========================================================================
    11. Media Queries - Smaller than 500px
    ========================================================================== */
-
+/*
 @media only screen and (max-width: 500px) {
 
-  /* Big cover image on the home page */
+
   .main-header {
-      /*position: relative;*/
       display: table;
       width: 100%;
       height: 40vh;
@@ -1679,12 +1678,11 @@ body:not(.post-template) .post-title {
       overflow: hidden;
   }
 
-  /* Centres vertically yo. (IE8+) */
+
   .vertical {
       display: table-cell;
       position: relative;
       top: 85%;
-      /*transform: translateY(25%);*/
   }
 
   .main-header .inner {
@@ -1807,7 +1805,7 @@ body:not(.post-template) .post-title {
     p, ul, ol, dl {
         font-size: 0.95em;
         margin: 0 0 2.5rem 0;
-    }*/
+    }
 
     .page-title {
         font-size: 2rem;
@@ -1870,9 +1868,9 @@ body:not(.post-template) .post-title {
 
     .post-content img {
         padding: 0;
-        width: calc(100% + 32px); /* expand with to image + margins */
+        width: calc(100% + 32px);
         min-width: 0;
-        max-width: 100%; /* fallback when calc doesn't work */
+        max-width: 100%;
     }
     .post-meta {
         font-size: 1.3rem;
@@ -1914,10 +1912,10 @@ body:not(.post-template) .post-title {
         position: static;
         margin: 10px 0;
     }
-/*
+
     .page-number {
         display: block;
-    }*/
+    }
 
     .site-footer {
         margin-top: 3rem;
@@ -1951,7 +1949,7 @@ body:not(.post-template) .post-title {
         display: none;
     }
 }
-
+*/
 
 /* ==========================================================================
    12. Animations
