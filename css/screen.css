@@ -1672,7 +1672,7 @@ body:not(.post-template) .post-title {
     }
 
     .main-header {
-        margin-bottom: 15px;
+        margin-bottom: 0px;
         height: 40vh;
     }
 
@@ -1682,13 +1682,13 @@ body:not(.post-template) .post-title {
 
     .archive-template .main-header {
         max-height: 20vh;
-        min-height: 160px;
-        padding: 10% 0;
+        min-height: 140px;
+        padding: 0% 0;
     }
 
     .main-nav {
         padding: 5px;
-        margin-bottom: 8em;
+        margin-bottom: 0em;
     }
 
     .blog-logo {
