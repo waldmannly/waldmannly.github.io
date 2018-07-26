@@ -468,7 +468,7 @@ margin on the iframe, cause it breaks stuff. */
     display: table-cell;
     position: relative;
     top: 75%;
-    /*transform: translateY(25%);*/
+    transform: translateY(25%);
 }
 
 /* Wraps the main content & footer */
