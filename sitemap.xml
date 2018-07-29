@@ -3,12 +3,37 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>https://waldmannly.github.io/post/research/</loc>
+  </url>
+  
+  <url>
+    <loc>https://waldmannly.github.io/post/projects/</loc>
+  </url>
+  
+  <url>
+    <loc>https://waldmannly.github.io/about/</loc>
+  </url>
+  
+  <url>
+    <loc>https://waldmannly.github.io/post/about/</loc>
+  </url>
+  
+  <url>
+    <loc>https://waldmannly.github.io/header/</loc>
+  </url>
+  
+  <url>
+    <loc>https://waldmannly.github.io/categories/</loc>
+    <priority>0</priority>
+  </url>
+  
+  <url>
     <loc>https://waldmannly.github.io/</loc>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://waldmannly.github.io/categories/</loc>
+    <loc>https://waldmannly.github.io/post/</loc>
     <priority>0</priority>
   </url>
   
