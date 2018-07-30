@@ -15,7 +15,20 @@ img.two {
     width: 80%;
 }
 
+.container {
+    position: relative;
+}
 
+/* Bottom right text */
+.text-block {
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+    background-color: black;
+    color: white;
+    padding-left: 20px;
+    padding-right: 20px;
+}
 </style>
 <body>
 
@@ -36,8 +49,11 @@ img.two {
   <a href="#" class="w3-bar-item w3-button w3-padding-large" onclick="myFunction()">MERCH</a>-->
 </div>
 
+
+
+</div>
 <!-- Page content -->
-<div class="w3-content" style="max-width:2000px;margin-top:46px">
+<div class="container" style="max-width:2000px;margin-top:46px">
 
   <!-- Automatic Slideshow Images -->
   <div class="mySlides w3-display-container w3-center">
@@ -62,6 +78,12 @@ img.two {
       <h3>Chicago</h3>
       <p><b>image three.</b></p>
     </div>
+
+		<div class="text-block">
+	    <h4>Nature</h4>
+	    <p>What a beautiful sunrise</p>
+	  </div>
+
   </div>
 
   <!-- The Band Section -->
