@@ -1,0 +1,32 @@
+languageCode = "en-us"
+title = "Evan Waldmann"
+baseurl = "https://waldmannly.github.io"
+theme = "aerial"
+
+[params]
+  name = "Evan Waldmann"
+  about = "Applied Mathematician &nbsp;&bull;&nbsp; Computer Scientist"
+  copyright = ""
+  #Disable the scrolling background by entering any string for bg_scroll. Enable by leaving bg_scroll empty.
+  bg_scroll = ""
+  favicon = "favicon.ico"
+
+[[params.social]]
+  medium = "Linkedin"
+  icon = "linkedin"
+  link = "https://www.linkedin.com/in/evan-waldmann-492368149/"
+
+[[params.social]]
+  medium = "Github"
+  icon = "github"
+  link = "https://github.com/waldmannly"
+
+  [[params.social]]
+    medium = "Instagram"
+    icon = "instagram"
+    link = "https://www.instagram.com/waldmannly/?hl=en"
+
+[[params.social]]
+  medium = "Email"
+  icon = "envelope-o"
+  link = "mailto:waldmannevan@gmail.com"
