@@ -1,0 +1,585 @@
+
+Evan Waldmann@DESKTOP-PKGLN5C MINGW64 ~
+$ cd desktop
+
+Evan Waldmann@DESKTOP-PKGLN5C MINGW64 ~/desktop
+$ cd website3
+
+Evan Waldmann@DESKTOP-PKGLN5C MINGW64 ~/desktop/website3
+$ git init
+Initialized empty Git repository in C:/Users/Evan Waldmann/Desktop/website3/.git/
+
+Evan Waldmann@DESKTOP-PKGLN5C MINGW64 ~/desktop/website3 (master)
+$ touch .gitignore
+
+Evan Waldmann@DESKTOP-PKGLN5C MINGW64 ~/desktop/website3 (master)
+$ git ls
+git: 'ls' is not a git command. See 'git --help'.
+
+The most similar command is
+        lfs
+
+Evan Waldmann@DESKTOP-PKGLN5C MINGW64 ~/desktop/website3 (master)
+$ ls
+about.html   content/     image.jpg  projects.html  resources/       themes/
+archetypes/  data/        images/    public/        shellscript.sh*
+config.toml  favicon.ico  layouts/   research.html  static/
+
+Evan Waldmann@DESKTOP-PKGLN5C MINGW64 ~/desktop/website3 (master)
+$ git status
+On branch master
+
+No commits yet
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+
+        .gitignore
+        about.html
+        archetypes/
+        config.toml
+        content/
+        favicon.ico
+        image.jpg
+        images/
+        projects.html
+        research.html
+        shellscript.sh
+        themes/
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+Evan Waldmann@DESKTOP-PKGLN5C MINGW64 ~/desktop/website3 (master)
+$ git add --all
+warning: LF will be replaced by CRLF in archetypes/default.md.
+The file will have its original line endings in your working directory.
+warning: LF will be replaced by CRLF in content/about.md.
+The file will have its original line endings in your working directory.
+warning: LF will be replaced by CRLF in content/post/about.md.
+The file will have its original line endings in your working directory.
+warning: LF will be replaced by CRLF in content/post/projects.md.
+The file will have its original line endings in your working directory.
+warning: LF will be replaced by CRLF in content/post/research.md.
+The file will have its original line endings in your working directory.
+warning: adding embedded git repository: themes/aerial
+hint: You've added another git repository inside your current repository.
+hint: Clones of the outer repository will not contain the contents of
+hint: the embedded repository and will not know how to obtain it.
+hint: If you meant to add a submodule, use:
+hint:
+hint:   git submodule add <url> themes/aerial
+hint:
+hint: If you added this path by mistake, you can remove it from the
+hint: index with:
+hint:
+hint:   git rm --cached themes/aerial
+hint:
+hint: See "git help submodule" for more information.
+
+Evan Waldmann@DESKTOP-PKGLN5C MINGW64 ~/desktop/website3 (master)
+$ gitgit
+bash: gitgit: command not found
+
+Evan Waldmann@DESKTOP-PKGLN5C MINGW64 ~/desktop/website3 (master)
+$ basename `git rev-parse --show-toplevel`
+Evan
+
+Evan Waldmann@DESKTOP-PKGLN5C MINGW64 ~/desktop/website3 (master)
+$ git remote show origin
+fatal: 'origin' does not appear to be a git repository
+fatal: Could not read from remote repository.
+
+Please make sure you have the correct access rights
+and the repository exists.
+
+Evan Waldmann@DESKTOP-PKGLN5C MINGW64 ~/desktop/website3 (master)
+$ basename -s .git `git config --get remote.origin.url`
+basename: missing operand
+Try 'basename --help' for more information.
+
+Evan Waldmann@DESKTOP-PKGLN5C MINGW64 ~/desktop/website3 (master)
+$ git add --all
+
+Evan Waldmann@DESKTOP-PKGLN5C MINGW64 ~/desktop/website3 (master)
+$ git status
+On branch master
+
+No commits yet
+
+Changes to be committed:
+  (use "git rm --cached <file>..." to unstage)
+
+        new file:   .gitignore
+        new file:   about.html
+        new file:   archetypes/default.md
+        new file:   config.toml
+        new file:   content/about.md
+        new file:   content/header.html
+        new file:   content/post/about.md
+        new file:   content/post/projects.md
+        new file:   content/post/research.md
+        new file:   favicon.ico
+        new file:   image.jpg
+        new file:   images/IMG_20180313_155932-PANO.jpg
+        new file:   images/IMG_20180314_141551.jpg
+        new file:   images/IMG_20180314_154256.jpg
+        new file:   images/IMG_20180314_155320.jpg
+        new file:   images/IMG_20180314_160404.jpg
+        new file:   images/IMG_20180315_183813.jpg
+        new file:   images/IMG_20180315_183853.jpg
+        new file:   images/IMG_20180315_183913.jpg
+        new file:   images/IMG_20180315_184035.jpg
+        new file:   images/IMG_20180315_184221.jpg
+        new file:   images/IMG_20180316_094453.jpg
+        new file:   images/IMG_20180316_105040.jpg
+        new file:   images/IMG_20180316_120246-PANO.jpg
+        new file:   images/IMG_20180316_160628.jpg
+        new file:   images/IMG_20180602_142822.jpg
+        new file:   images/IMG_20180721_155324.jpg
+        new file:   images/IMG_20180721_155745.jpg
+        new file:   images/IMG_20180721_161804.jpg
+        new file:   images/IMG_6381.jpg
+        new file:   images/IMG_6416.jpg
+        new file:   images/one.jpg
+        new file:   images/three.jpg
+        new file:   images/two.jpg
+        new file:   projects.html
+        new file:   research.html
+        new file:   shellscript.sh
+        new file:   themes/aerial
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git checkout -- <file>..." to discard changes in working directory)
+  (commit or discard the untracked or modified content in submodules)
+
+        modified:   themes/aerial (modified content, untracked content)
+
+
+Evan Waldmann@DESKTOP-PKGLN5C MINGW64 ~/desktop/website3 (master)
+$ cd public
+
+Evan Waldmann@DESKTOP-PKGLN5C MINGW64 ~/desktop/website3/public (master)
+$ cd ../
+
+Evan Waldmann@DESKTOP-PKGLN5C MINGW64 ~/desktop/website3 (master)
+$ cd themes
+
+Evan Waldmann@DESKTOP-PKGLN5C MINGW64 ~/desktop/website3/themes (master)
+$ cd aerial
+
+Evan Waldmann@DESKTOP-PKGLN5C MINGW64 ~/desktop/website3/themes/aerial (master)
+$ cd ../
+
+Evan Waldmann@DESKTOP-PKGLN5C MINGW64 ~/desktop/website3/themes (master)
+$ cd../
+bash: cd../: No such file or directory
+
+Evan Waldmann@DESKTOP-PKGLN5C MINGW64 ~/desktop/website3/themes (master)
+$ cd ../
+
+Evan Waldmann@DESKTOP-PKGLN5C MINGW64 ~/desktop/website3 (master)
+$ git add --all
+
+Evan Waldmann@DESKTOP-PKGLN5C MINGW64 ~/desktop/website3 (master)
+$ git status
+On branch master
+
+No commits yet
+
+Changes to be committed:
+  (use "git rm --cached <file>..." to unstage)
+
+        new file:   .gitignore
+        new file:   about.html
+        new file:   archetypes/default.md
+        new file:   config.toml
+        new file:   content/about.md
+        new file:   content/header.html
+        new file:   content/post/about.md
+        new file:   content/post/projects.md
+        new file:   content/post/research.md
+        new file:   favicon.ico
+        new file:   image.jpg
+        new file:   images/IMG_20180313_155932-PANO.jpg
+        new file:   images/IMG_20180314_141551.jpg
+        new file:   images/IMG_20180314_154256.jpg
+        new file:   images/IMG_20180314_155320.jpg
+        new file:   images/IMG_20180314_160404.jpg
+        new file:   images/IMG_20180315_183813.jpg
+        new file:   images/IMG_20180315_183853.jpg
+        new file:   images/IMG_20180315_183913.jpg
+        new file:   images/IMG_20180315_184035.jpg
+        new file:   images/IMG_20180315_184221.jpg
+        new file:   images/IMG_20180316_094453.jpg
+        new file:   images/IMG_20180316_105040.jpg
+        new file:   images/IMG_20180316_120246-PANO.jpg
+        new file:   images/IMG_20180316_160628.jpg
+        new file:   images/IMG_20180602_142822.jpg
+        new file:   images/IMG_20180721_155324.jpg
+        new file:   images/IMG_20180721_155745.jpg
+        new file:   images/IMG_20180721_161804.jpg
+        new file:   images/IMG_6381.jpg
+        new file:   images/IMG_6416.jpg
+        new file:   images/one.jpg
+        new file:   images/three.jpg
+        new file:   images/two.jpg
+        new file:   projects.html
+        new file:   research.html
+        new file:   shellscript.sh
+        new file:   themes/aerial
+
+
+Evan Waldmann@DESKTOP-PKGLN5C MINGW64 ~/desktop/website3 (master)
+$ git reset
+fatal: not a git repository (or any of the parent directories): .git
+
+Evan Waldmann@DESKTOP-PKGLN5C MINGW64 ~/desktop/website3
+$ git init
+Initialized empty Git repository in C:/Users/Evan Waldmann/Desktop/website3/.git/
+
+Evan Waldmann@DESKTOP-PKGLN5C MINGW64 ~/desktop/website3 (master)
+$ git status
+On branch master
+
+No commits yet
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+
+        .gitignore
+        about.html
+        archetypes/
+        config.toml
+        content/
+        favicon.ico
+        image.jpg
+        images/
+        projects.html
+        research.html
+        shellscript.sh
+        themes/
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+Evan Waldmann@DESKTOP-PKGLN5C MINGW64 ~/desktop/website3 (master)
+$ git add -all
+error: did you mean `--all` (with two dashes ?)
+
+Evan Waldmann@DESKTOP-PKGLN5C MINGW64 ~/desktop/website3 (master)
+$ git add --all
+warning: LF will be replaced by CRLF in archetypes/default.md.
+The file will have its original line endings in your working directory.
+warning: LF will be replaced by CRLF in content/about.md.
+The file will have its original line endings in your working directory.
+warning: LF will be replaced by CRLF in content/post/about.md.
+The file will have its original line endings in your working directory.
+warning: LF will be replaced by CRLF in content/post/projects.md.
+The file will have its original line endings in your working directory.
+warning: LF will be replaced by CRLF in content/post/research.md.
+The file will have its original line endings in your working directory.
+
+Evan Waldmann@DESKTOP-PKGLN5C MINGW64 ~/desktop/website3 (master)
+$ git status
+On branch master
+
+No commits yet
+
+Changes to be committed:
+  (use "git rm --cached <file>..." to unstage)
+
+        new file:   .gitignore
+        new file:   about.html
+        new file:   archetypes/default.md
+        new file:   config.toml
+        new file:   content/about.md
+        new file:   content/header.html
+        new file:   content/post/about.md
+        new file:   content/post/projects.md
+        new file:   content/post/research.md
+        new file:   favicon.ico
+        new file:   image.jpg
+        new file:   images/IMG_20180313_155932-PANO.jpg
+        new file:   images/IMG_20180314_141551.jpg
+        new file:   images/IMG_20180314_154256.jpg
+        new file:   images/IMG_20180314_155320.jpg
+        new file:   images/IMG_20180314_160404.jpg
+        new file:   images/IMG_20180315_183813.jpg
+        new file:   images/IMG_20180315_183853.jpg
+        new file:   images/IMG_20180315_183913.jpg
+        new file:   images/IMG_20180315_184035.jpg
+        new file:   images/IMG_20180315_184221.jpg
+        new file:   images/IMG_20180316_094453.jpg
+        new file:   images/IMG_20180316_105040.jpg
+        new file:   images/IMG_20180316_120246-PANO.jpg
+        new file:   images/IMG_20180316_160628.jpg
+        new file:   images/IMG_20180602_142822.jpg
+        new file:   images/IMG_20180721_155324.jpg
+        new file:   images/IMG_20180721_155745.jpg
+        new file:   images/IMG_20180721_161804.jpg
+        new file:   images/IMG_6381.jpg
+        new file:   images/IMG_6416.jpg
+        new file:   images/one.jpg
+        new file:   images/three.jpg
+        new file:   images/two.jpg
+        new file:   projects.html
+        new file:   research.html
+        new file:   shellscript.sh
+        new file:   themes/aerial/LICENSE.md
+        new file:   themes/aerial/README.md
+        new file:   themes/aerial/archetypes/default.md
+        new file:   themes/aerial/exampleSite/config.toml
+        new file:   themes/aerial/images/screenshot.png
+        new file:   themes/aerial/images/tn.png
+        new file:   themes/aerial/layouts/404.html
+        new file:   themes/aerial/layouts/_default/list.html
+        new file:   themes/aerial/layouts/_default/onepagestyle.html
+        new file:   themes/aerial/layouts/_default/single.html
+        new file:   themes/aerial/layouts/index.html
+        new file:   themes/aerial/layouts/partials/footer.html
+        new file:   themes/aerial/layouts/partials/header.html
+        new file:   themes/aerial/layouts/partials/js.html
+        new file:   themes/aerial/static/css/font-awesome.min.css
+        new file:   themes/aerial/static/css/ie8.css
+        new file:   themes/aerial/static/css/ie9.css
+        new file:   themes/aerial/static/css/images/bg.jpg
+        new file:   themes/aerial/static/css/images/bg1.jpg
+        new file:   themes/aerial/static/css/images/bg3.jpg
+        new file:   themes/aerial/static/css/images/ie/footer.png
+        new file:   themes/aerial/static/css/images/ie/footer.svg
+        new file:   themes/aerial/static/css/images/overlay-pattern.png
+        new file:   themes/aerial/static/css/images/overlay.svg
+        new file:   themes/aerial/static/css/main.css
+        new file:   themes/aerial/static/fonts/FontAwesome.otf
+        new file:   themes/aerial/static/fonts/fontawesome-webfont.eot
+        new file:   themes/aerial/static/fonts/fontawesome-webfont.svg
+        new file:   themes/aerial/static/fonts/fontawesome-webfont.ttf
+        new file:   themes/aerial/static/fonts/fontawesome-webfont.woff
+        new file:   themes/aerial/static/fonts/fontawesome-webfont.woff2
+        new file:   themes/aerial/static/js/ie/PIE.htc
+        new file:   themes/aerial/static/js/ie/html5shiv.js
+        new file:   themes/aerial/static/js/ie/respond.min.js
+        new file:   themes/aerial/static/js/index.js
+        new file:   themes/aerial/static/js/jquery.fitvids.js
+        new file:   themes/aerial/static/js/jquery.js
+        new file:   themes/aerial/static/js/particles.js
+        new file:   themes/aerial/static/sass/ie8.scss
+        new file:   themes/aerial/static/sass/ie9.scss
+        new file:   themes/aerial/static/sass/libs/_functions.scss
+        new file:   themes/aerial/static/sass/libs/_mixins.scss
+        new file:   themes/aerial/static/sass/libs/_skel.scss
+        new file:   themes/aerial/static/sass/libs/_vars.scss
+        new file:   themes/aerial/static/sass/main.scss
+        new file:   themes/aerial/theme.toml
+
+
+Evan Waldmann@DESKTOP-PKGLN5C MINGW64 ~/desktop/website3 (master)
+$ git commit -a -m "trying to commit all except public"
+[master (root-commit) 97dc660] trying to commit all except public
+ 83 files changed, 6315 insertions(+)
+ create mode 100644 .gitignore
+ create mode 100644 about.html
+ create mode 100644 archetypes/default.md
+ create mode 100644 config.toml
+ create mode 100644 content/about.md
+ create mode 100644 content/header.html
+ create mode 100644 content/post/about.md
+ create mode 100644 content/post/projects.md
+ create mode 100644 content/post/research.md
+ create mode 100644 favicon.ico
+ create mode 100644 image.jpg
+ create mode 100644 images/IMG_20180313_155932-PANO.jpg
+ create mode 100644 images/IMG_20180314_141551.jpg
+ create mode 100644 images/IMG_20180314_154256.jpg
+ create mode 100644 images/IMG_20180314_155320.jpg
+ create mode 100644 images/IMG_20180314_160404.jpg
+ create mode 100644 images/IMG_20180315_183813.jpg
+ create mode 100644 images/IMG_20180315_183853.jpg
+ create mode 100644 images/IMG_20180315_183913.jpg
+ create mode 100644 images/IMG_20180315_184035.jpg
+ create mode 100644 images/IMG_20180315_184221.jpg
+ create mode 100644 images/IMG_20180316_094453.jpg
+ create mode 100644 images/IMG_20180316_105040.jpg
+ create mode 100644 images/IMG_20180316_120246-PANO.jpg
+ create mode 100644 images/IMG_20180316_160628.jpg
+ create mode 100644 images/IMG_20180602_142822.jpg
+ create mode 100644 images/IMG_20180721_155324.jpg
+ create mode 100644 images/IMG_20180721_155745.jpg
+ create mode 100644 images/IMG_20180721_161804.jpg
+ create mode 100644 images/IMG_6381.jpg
+ create mode 100644 images/IMG_6416.jpg
+ create mode 100644 images/one.jpg
+ create mode 100644 images/three.jpg
+ create mode 100644 images/two.jpg
+ create mode 100644 projects.html
+ create mode 100644 research.html
+ create mode 100644 shellscript.sh
+ create mode 100644 themes/aerial/LICENSE.md
+ create mode 100644 themes/aerial/README.md
+ create mode 100644 themes/aerial/archetypes/default.md
+ create mode 100644 themes/aerial/exampleSite/config.toml
+ create mode 100644 themes/aerial/images/screenshot.png
+ create mode 100644 themes/aerial/images/tn.png
+ create mode 100644 themes/aerial/layouts/404.html
+ create mode 100644 themes/aerial/layouts/_default/list.html
+ create mode 100644 themes/aerial/layouts/_default/onepagestyle.html
+ create mode 100644 themes/aerial/layouts/_default/single.html
+ create mode 100644 themes/aerial/layouts/index.html
+ create mode 100644 themes/aerial/layouts/partials/footer.html
+ create mode 100644 themes/aerial/layouts/partials/header.html
+ create mode 100644 themes/aerial/layouts/partials/js.html
+ create mode 100644 themes/aerial/static/css/font-awesome.min.css
+ create mode 100644 themes/aerial/static/css/ie8.css
+ create mode 100644 themes/aerial/static/css/ie9.css
+ create mode 100644 themes/aerial/static/css/images/bg.jpg
+ create mode 100644 themes/aerial/static/css/images/bg1.jpg
+ create mode 100644 themes/aerial/static/css/images/bg3.jpg
+ create mode 100644 themes/aerial/static/css/images/ie/footer.png
+ create mode 100644 themes/aerial/static/css/images/ie/footer.svg
+ create mode 100644 themes/aerial/static/css/images/overlay-pattern.png
+ create mode 100644 themes/aerial/static/css/images/overlay.svg
+ create mode 100644 themes/aerial/static/css/main.css
+ create mode 100644 themes/aerial/static/fonts/FontAwesome.otf
+ create mode 100644 themes/aerial/static/fonts/fontawesome-webfont.eot
+ create mode 100644 themes/aerial/static/fonts/fontawesome-webfont.svg
+ create mode 100644 themes/aerial/static/fonts/fontawesome-webfont.ttf
+ create mode 100644 themes/aerial/static/fonts/fontawesome-webfont.woff
+ create mode 100644 themes/aerial/static/fonts/fontawesome-webfont.woff2
+ create mode 100644 themes/aerial/static/js/ie/PIE.htc
+ create mode 100644 themes/aerial/static/js/ie/html5shiv.js
+ create mode 100644 themes/aerial/static/js/ie/respond.min.js
+ create mode 100644 themes/aerial/static/js/index.js
+ create mode 100644 themes/aerial/static/js/jquery.fitvids.js
+ create mode 100644 themes/aerial/static/js/jquery.js
+ create mode 100644 themes/aerial/static/js/particles.js
+ create mode 100644 themes/aerial/static/sass/ie8.scss
+ create mode 100644 themes/aerial/static/sass/ie9.scss
+ create mode 100644 themes/aerial/static/sass/libs/_functions.scss
+ create mode 100644 themes/aerial/static/sass/libs/_mixins.scss
+ create mode 100644 themes/aerial/static/sass/libs/_skel.scss
+ create mode 100644 themes/aerial/static/sass/libs/_vars.scss
+ create mode 100644 themes/aerial/static/sass/main.scss
+ create mode 100644 themes/aerial/theme.toml
+
+Evan Waldmann@DESKTOP-PKGLN5C MINGW64 ~/desktop/website3 (master)
+$ git add README.md
+fatal: pathspec 'README.md' did not match any files
+
+Evan Waldmann@DESKTOP-PKGLN5C MINGW64 ~/desktop/website3 (master)
+$ echo "# website--Source" >> README.md
+
+Evan Waldmann@DESKTOP-PKGLN5C MINGW64 ~/desktop/website3 (master)
+$ git add README.md
+warning: LF will be replaced by CRLF in README.md.
+The file will have its original line endings in your working directory.
+
+Evan Waldmann@DESKTOP-PKGLN5C MINGW64 ~/desktop/website3 (master)
+$ git commit -a -m "trying to commit all except public"
+[master bacd248] trying to commit all except public
+ 1 file changed, 1 insertion(+)
+ create mode 100644 README.md
+
+Evan Waldmann@DESKTOP-PKGLN5C MINGW64 ~/desktop/website3 (master)
+$ git remote add origin https://github.com/waldmannly/website--Source.git
+
+Evan Waldmann@DESKTOP-PKGLN5C MINGW64 ~/desktop/website3 (master)
+$ git push -u origin master
+Counting objects: 102, done.
+Delta compression using up to 8 threads.
+Compressing objects: 100% (94/94), done.
+Writing objects: 100% (102/102), 111.88 MiB | 1.57 MiB/s, done.
+Total 102 (delta 9), reused 0 (delta 0)
+remote: Resolving deltas: 100% (9/9), done.
+To https://github.com/waldmannly/website--Source.git
+ * [new branch]      master -> master
+Branch 'master' set up to track remote branch 'master' from 'origin'.
+
+Evan Waldmann@DESKTOP-PKGLN5C MINGW64 ~/desktop/website3 (master)
+$ cd ../
+
+Evan Waldmann@DESKTOP-PKGLN5C MINGW64 ~/desktop
+$ cd testwebsiteclone
+bash: cd: testwebsiteclone: No such file or directory
+
+Evan Waldmann@DESKTOP-PKGLN5C MINGW64 ~/desktop
+$ touch testwebsiteclone
+
+Evan Waldmann@DESKTOP-PKGLN5C MINGW64 ~/desktop
+$ cd testwebsiteclone
+bash: cd: testwebsiteclone: Not a directory
+
+Evan Waldmann@DESKTOP-PKGLN5C MINGW64 ~/desktop
+$ mkdir testwebsiteclone
+
+Evan Waldmann@DESKTOP-PKGLN5C MINGW64 ~/desktop
+$ cd testwebsiteclone/
+
+Evan Waldmann@DESKTOP-PKGLN5C MINGW64 ~/desktop/testwebsiteclone
+$ git clone https://github.com/waldmannly/website--Source.git
+Cloning into 'website--Source'...
+remote: Counting objects: 102, done.
+remote: Compressing objects: 100% (85/85), done.
+remote: Total 102 (delta 9), reused 102 (delta 9), pack-reused 0
+Receiving objects: 100% (102/102), 111.88 MiB | 3.71 MiB/s, done.
+Resolving deltas: 100% (9/9), done.
+
+Evan Waldmann@DESKTOP-PKGLN5C MINGW64 ~/desktop/testwebsiteclone
+$ cd website--Source/
+
+Evan Waldmann@DESKTOP-PKGLN5C MINGW64 ~/desktop/testwebsiteclone/website--Source (master)
+$ cd public
+
+Evan Waldmann@DESKTOP-PKGLN5C MINGW64 ~/desktop/testwebsiteclone/website--Source/public (master)
+$ git status
+On branch master
+Your branch is up to date with 'origin/master'.
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git checkout -- <file>..." to discard changes in working directory)
+
+        modified:   ../about.html
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+Evan Waldmann@DESKTOP-PKGLN5C MINGW64 ~/desktop/testwebsiteclone/website--Source/public (master)
+$ git add .
+
+Evan Waldmann@DESKTOP-PKGLN5C MINGW64 ~/desktop/testwebsiteclone/website--Source/public (master)
+$ git push
+Everything up-to-date
+
+Evan Waldmann@DESKTOP-PKGLN5C MINGW64 ~/desktop/testwebsiteclone/website--Source/public (master)
+$ cd
+
+Evan Waldmann@DESKTOP-PKGLN5C MINGW64 ~
+$ cd desktop
+
+Evan Waldmann@DESKTOP-PKGLN5C MINGW64 ~/desktop
+$ cd testwebsiteclone/
+
+Evan Waldmann@DESKTOP-PKGLN5C MINGW64 ~/desktop/testwebsiteclone
+$ cd website--Source/
+
+Evan Waldmann@DESKTOP-PKGLN5C MINGW64 ~/desktop/testwebsiteclone/website--Source (master)
+$ git clone https://github.com/waldmannly/waldmannly.github.io.git
+Cloning into 'waldmannly.github.io'...
+remote: Counting objects: 620, done.
+remote: Compressing objects: 100% (43/43), done.
+remote: Total 620 (delta 36), reused 40 (delta 18), pack-reused 559
+Receiving objects: 100% (620/620), 120.39 MiB | 2.28 MiB/s, done.
+Resolving deltas: 100% (313/313), done.
+Checking out files: 100% (90/90), done.
+
+Evan Waldmann@DESKTOP-PKGLN5C MINGW64 ~/desktop/testwebsiteclone/website--Source (master)
+$ git clone https://github.com/waldmannly/waldmannly.github.io.git public
+Cloning into 'public'...
+remote: Counting objects: 620, done.
+remote: Compressing objects: 100% (43/43), done.
+remote: Total 620 (delta 36), reused 40 (delta 18), pack-reused 559
+Receiving objects: 100% (620/620), 120.39 MiB | 2.46 MiB/s, done.
+Resolving deltas: 100% (313/313), done.
+Checking out files: 100% (90/90), done.
+
+Evan Waldmann@DESKTOP-PKGLN5C MINGW64 ~/desktop/testwebsiteclone/website--Source (master)
+$
