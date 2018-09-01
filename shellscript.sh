@@ -10,6 +10,7 @@ cp research.html public/research.html -f
 cp projects.html public/projects.html -f
 cp images public/images -f -r
 cp favicon.ico public/favicon.ico -f
+cp CNAME public/CNAME -f
 
 # Go To Public folder
 cd public
