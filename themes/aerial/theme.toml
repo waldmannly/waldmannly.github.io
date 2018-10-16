@@ -4,18 +4,25 @@
 name = "Aerial"
 license = "Creative Commons Attribution 3.0 Unported"
 licenselink = "https://github.com/sethmacleod/aerial/blob/master/LICENSE.md"
-description = "Ported theme of HTML5 UP's Aerial: a single page, single screen responsive site template."
-homepage = "https://github.com/sethmacleod/aerial"
-tags = ["responsive", "personal"]
+description = "Evan Waldmann is an undergraduate student at UCF studying Mathematics, Computer Science, and Statistics."
+homepage = "https://waldmannly.github.io/"
+tags = ["Evan Waldmann, Evan, Waldmann, Math, Computer Science, harvard, UCF,
+University of Central Florida, Modeling, Programmer, Statistician, Data, Scientist, Data Scientist, Mentor,
+STRONG Mentor, AI, Artifical Intelligence"]
 features = ["responsive"]
 min_version = 0.18
 
 [author]
-  name = "Seth MacLeod"
-  homepage = "https://www.sethmacleod.com/"
+  name = "Evan Waldmann"
+  homepage = ""
 
 # If porting an existing theme
 [original]
   name = "@ajlkn"
   homepage = "https://html5up.net/aerial"
   repo = ""
+
+  <meta name="description" content="Evan Waldmann is an undergraduate student at UCF studying Mathematics, Computer Science, and Statistics.">
+<meta name="keywords" content="Evan Waldmann, Evan, Waldmann, Math, Computer Science, harvard, UCF,
+University of Central Florida, Modeling, Programmer, Statistician, Data, Scientist, Data Scientist, Mentor,
+STRONG Mentor, AI, Artifical Intelligence">
