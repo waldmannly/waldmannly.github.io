@@ -29,3 +29,5 @@ git push
 
 # Come Back up to the Project Root
 cd ..
+read -p "Press any key to resume ..."
+pause 
