@@ -11,6 +11,9 @@ body {font-family: "Lato", sans-serif}
 .mySlides {display: none}
 .blue-color{color:#fff!important;background-color:#6F91AF!important}
 </style>
+
+<link rel="stylesheet" href="croppie.css" />
+<script src="croppie.js"></script>
 <body>
 
 <!-- Navbar -->
@@ -42,6 +45,7 @@ body {font-family: "Lato", sans-serif}
 
 		</p>
 		</div>
+
 
   <!-- Automatic Slideshow Images -->
   <div class="mySlides w3-display-container w3-center">
@@ -84,7 +88,57 @@ body {font-family: "Lato", sans-serif}
       </div>
     </div>
   </div>-->
-
+  <div class="demo-wrap upload-demo">
+    <div class="container">
+      <div class="grid">
+        <div class="col-1-2">
+          <strong>Upload Example (with exif orientation compatability)</strong>
+          <pre class=" language-javascript"><code class=" language-javascript">
+            $uploadCrop <span class="token operator">=</span> <span class="token function">$</span><span class="token punctuation">(</span><span class="token string">'#upload-demo'</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">croppie</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
+              enableExif<span class="token punctuation">:</span> <span class="token boolean">true</span><span class="token punctuation">,</span>
+              viewport<span class="token punctuation">:</span> <span class="token punctuation">{</span>
+                width<span class="token punctuation">:</span> <span class="token number">200</span><span class="token punctuation">,</span>
+                height<span class="token punctuation">:</span> <span class="token number">200</span><span class="token punctuation">,</span>
+                type<span class="token punctuation">:</span> <span class="token string">'circle'</span>
+                <span class="token punctuation">}</span><span class="token punctuation">,</span>
+                boundary<span class="token punctuation">:</span> <span class="token punctuation">{</span>
+                  width<span class="token punctuation">:</span> <span class="token number">300</span><span class="token punctuation">,</span>
+                  height<span class="token punctuation">:</span> <span class="token number">300</span>
+                  <span class="token punctuation">}</span>
+                  <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span></code></pre>
+                  <div class="actions">
+                    <a class="btn file-btn">
+                      <span>Upload</span>
+                      <input type="file" id="upload" value="Choose a file" accept="image/*">
+                    </a>
+                    <button class="upload-result">Result</button>
+                  </div>
+                </div>
+                <div class="col-1-2">
+                  <div class="upload-msg">
+                    Upload a file to start cropping
+                  </div>
+                  <div class="upload-demo-wrap">
+                    <div id="upload-demo" class="croppie-container"><div class="cr-boundary" aria-dropeffect="none"><canvas class="cr-image" alt="preview" aria-grabbed="false"></canvas><div class="cr-viewport cr-vp-circle" tabindex="0" style="width: 100px; height: 100px;"></div><div class="cr-overlay"></div></div><div class="cr-slider-wrap"><input class="cr-slider" type="range" step="0.0001" aria-label="zoom"></div></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+  <script>
+  $uploadCrop = $('#upload-demo').croppie({
+      enableExif: true,
+      viewport: {
+          width: 200,
+          height: 200,
+          type: 'circle'
+      },
+      boundary: {
+          width: 300,
+          height: 300
+      }
+  });
+  </script>
 
 <!-- End Page Content -->
 </div>
@@ -130,6 +184,10 @@ window.onclick = function(event) {
   }
 }
 </script>
+
+
+
+
 
 </body>
 </html>
