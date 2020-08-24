@@ -1,3 +1,5 @@
+import 'croppie.js';
+
 var Demo = (function() {
 
 	function output(node) {
