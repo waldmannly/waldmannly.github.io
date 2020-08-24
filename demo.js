@@ -1,7 +1,7 @@
 
 
 var Demo = (function() {
-import 'croppie.js';
+// import 'croppie.js';
 	function output(node) {
 		var existing = $('#result .croppie-result');
 		if (existing.length > 0) {
