@@ -248,7 +248,7 @@ var Demo = (function() {
 	}
 
 	function init() {
-		// bindNavigation();
+		bindNavigation();
 		// demoMain();
 		// demoBasic();
 		// demoVanilla();
