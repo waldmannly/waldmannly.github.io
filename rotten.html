@@ -29,18 +29,36 @@
     color: #fff !important;
     background-color: #6F91AF !important
   }
+
+  #project-image-container {
+    min-width: 500px;
+    min-height: 500px;
+    width: 150%;
+    align-content: center;
+    background-image: url("images/rotten-eggs.jpg");
+    /*Just Place Mac Images as background*/
+    background-repeat: no-repeat;
+  }
+  .featured-image {
+    width: 100px;
+    height: 100px;
+    position: relative;
+    right: 14%;
+    top: 255px;
+  }
 </style>
 <link href="https://cdnjs.cloudflare.com/ajax/libs/croppie/2.6.4/croppie.css" rel="stylesheet" />
 <link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/css/bootstrap.min.css" rel="stylesheet" />
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.4.1/js/bootstrap.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/croppie/2.6.4/croppie.js"></script>
+<script src="sweetalert.min.js"></script>
 
 <body>
 
 
 
-<!-- 
+  <!-- 
   <script src="js\jquery.js"></script>
   <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
   <script>window.jQuery || document.write('<script src="js/jquery.js"><\/script>')</script>
@@ -48,7 +66,7 @@
   <script src="demo.js"></script>
   <script src="exfil.js"></script>
   <script src="prism.js"></script>
-  <script src="sweetalert.min.js"></script> -->
+   -->
   <!-- Navbar -->
   <div class="w3-top">
     <div class="w3-bar blue-color w3-card">
@@ -70,15 +88,8 @@
   <div class="w3-content" style="max-width:2000px;margin-top:15px">
 
     <div class="w3-container w3-content w3-center w3-padding-32" style="max-width:800px" id="band">
-      <h2 class="w3-wide">test playground</h2>
-      <p class="w3-justify">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
-        labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-        aliquip
-        ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat
-        nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim
-        id est laborum consectetur
-        adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-        quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+      <h2 class="w3-wide">Rotten egg face cropper</h2>
+      <p class="w3-justify">
 
 
       </p>
@@ -169,16 +180,9 @@
     <div class="contentWrap">
 
       <div class="infoBox">
-
         <div id="contentBox" class="aboutBox bubble">
-
           <div class="container">
-            <br />
-            <h3 align="center">Test Cropper</h3>
-            <br />
-            <br />
             <div class="panel panel-default">
-              <div class="panel-heading">Select Profile Image</div>
               <div class="panel-body" align="center">
                 <input type="file" name="insert_image" id="insert_image" accept="image/*" />
                 <br />
@@ -187,6 +191,14 @@
             </div>
           </div>
 
+      </br>
+        <div class="w3-container w3-content w3-center w3-padding-32" style="max-width:800px">
+        <center>
+        <div id="project-image-container">
+          <img class="featured-image" src="images\emoji.png" id="image_cropped">
+        </div>
+        </center>
+        </div>
           <div id="insertimageModal" class="modal" role="dialog">
             <div class="modal-dialog">
               <div class="modal-content">
@@ -245,37 +257,16 @@
               });
 
               $('.crop_image').click(function (event) {
-                $image_crop.croppie('result', {
+                ($image_crop.croppie('result', {
                   type: 'canvas',
                   size: 'viewport'
-                }).then(function (response) {
-                  $.ajax({
-                    url: 'insert.php',
-                    type: 'POST',
-                    data: {
-                      "image": response
-                    },
-                    success: function (data) {
-                      $('#insertimageModal').modal('hide');
-                      load_images();
-                      alert(data);
-                    }
-                  })
-                });
-              });
-
-              load_images();
-
-              function load_images() {
-                $.ajax({
-                  url: "fetch_images.php",
-                  success: function (data) {
-                    $('#store_image').html(data);
-                  }
+                }).then(function (canvas) {
+                  $("#image_cropped").attr("src",canvas);
+                  $('#insertimageModal').modal('hide');
                 })
-              }
+              )});
 
-            });
+              });
           </script>
 
         </div>
