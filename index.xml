@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Evan Waldmann</title>
@@ -16,9 +16,7 @@
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://waldmannly.github.io/post/research/</guid>
-      <description>Test about interests. More text. Examples stuff
-Even more stuff Link to CV
-linkedin instagram</description>
+      <description>Test about interests. More text. Examples stuffEven more stuff Link to CVlinkedin instagram</description>
     </item>
     
     <item>
@@ -27,9 +25,7 @@ linkedin instagram</description>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://waldmannly.github.io/post/projects/</guid>
-      <description>Test about interests. More text. Examples stuff
-Even more stuff Link to CV
-linkedin instagram</description>
+      <description>Test about interests. More text. Examples stuffEven more stuff Link to CVlinkedin instagram</description>
     </item>
     
     <item>
@@ -50,15 +46,6 @@ Nullam et orci eu lorem consequat tincidunt vivamus et sagittis libero. Mauris a
       <guid>https://waldmannly.github.io/post/about/</guid>
       <description>Adipiscing magna sed dolor elit. Praesent eleifend dignissim arcu, at eleifend sapien imperdiet ac. Aliquam erat volutpat. Praesent urna nisi, fringila lorem et vehicula lacinia quam. Integer sollicitudin mauris nec lorem luctus ultrices.
 Nullam et orci eu lorem consequat tincidunt vivamus et sagittis libero. Mauris aliquet magna magna sed nunc rhoncus pharetra. Pellentesque condimentum sem. In efficitur ligula tate urna. Maecenas laoreet massa vel lacinia pellentesque lorem ipsum dolor. Nullam et orci eu lorem consequat tincidunt.</description>
-    </item>
-    
-    <item>
-      <title></title>
-      <link>https://waldmannly.github.io/header/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://waldmannly.github.io/header/</guid>
-      <description></description>
     </item>
     
   </channel>
