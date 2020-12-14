@@ -1,0 +1,487 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+  <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+  <meta name="description" content="Evan Waldmann is an undergraduate student at UCF studying Mathematics, Computer Science, and Statistics.">
+<meta name="keywords" content="Evan Waldmann, Evan, Waldmann, Math, Computer Science, harvard, UCF,
+University of Central Florida, Modeling, Programmer, Statistician, Data, Scientist, Data Scientist, Mentor,
+STRONG Mentor, AI, Artifical Intelligence">
+</head>
+<title>Projects/Experiences</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+body {font-family: "Lato", sans-serif}
+.mySlides {display: none}
+.blue-color{color:#fff!important;background-color:#6F91AF!important}
+
+.circle {
+  font-weight: bold;
+  padding: 15px 20px;
+  border-radius: 50%;
+  background-color: #ED8D8D;
+  color: #4D4545;
+  max-height: 50px;
+  z-index: 2;
+}
+
+.how-it-works.row {
+  display: flex;
+}
+.how-it-works.row .col-2 {
+  display: inline-flex;
+  align-self: stretch;
+  align-items: center;
+  justify-content: center;
+}
+.how-it-works.row .col-2::after {
+  content: "";
+  position: absolute;
+  border-left: 3px solid #ED8D8D;
+  z-index: 1;
+}
+.how-it-works.row .col-2.bottom::after {
+  height: 50%;
+  left: 50%;
+  top: 50%;
+}
+.how-it-works.row .col-2.full::after {
+  height: 100%;
+  left: calc(50% - 3px);
+}
+.how-it-works.row .col-2.top::after {
+  height: 50%;
+  left: 50%;
+  top: 0;
+}
+
+.timeline div {
+  padding: 0;
+  height: 40px;
+}
+.timeline hr {
+  border-top: 3px solid #ED8D8D;
+  margin: 0;
+  top: 17px;
+  position: relative;
+}
+.timeline .col-2 {
+  display: flex;
+  overflow: hidden;
+}
+.timeline .corner {
+  border: 3px solid #ED8D8D;
+  width: 100%;
+  position: relative;
+  border-radius: 15px;
+}
+.timeline .top-right {
+  left: 50%;
+  top: -50%;
+}
+.timeline .left-bottom {
+  left: -50%;
+  top: calc(50% - 3px);
+}
+.timeline .top-left {
+  left: -50%;
+  top: -50%;
+}
+.timeline .right-bottom {
+  left: 50%;
+  top: calc(50% - 3px);
+}
+
+
+
+
+
+
+
+p {
+  font-size: 1em;
+  line-height: 1.75em;
+  border-top: 3px solid;
+  -webkit-border-image: -webkit-gradient(linear, left top, right top, from(#743ad5), to(#d53a9d));
+  -webkit-border-image: linear-gradient(to right, #743ad5 0%, #d53a9d 100%);
+       -o-border-image: linear-gradient(to right, #743ad5 0%, #d53a9d 100%);
+          border-image: -webkit-gradient(linear, left top, right top, from(#743ad5), to(#d53a9d));
+          border-image: linear-gradient(to right, #743ad5 0%, #d53a9d 100%);
+  border-image-slice: 1;
+  border-width: 3px;
+  margin: 0;
+  padding: 40px;
+  counter-increment: section;
+  position: relative;
+  color: #34435E;
+}
+p:before {
+  content: counter(section);
+  position: absolute;
+  border-radius: 50%;
+  padding: 10px;
+  height: 1.25em;
+  width: 1.25em;
+  background-color: #34435E;
+  text-align: center;
+  line-height: 1.25em;
+  color: #ffffff;
+  font-size: 1em;
+}
+
+p:nth-child(odd) {
+  border-right: 3px solid;
+  padding-left: 0;
+}
+p:nth-child(odd):before {
+  left: 100%;
+  margin-left: -20px;
+}
+
+p:nth-child(even) {
+  border-left: 3px solid;
+  padding-right: 0;
+}
+p:nth-child(even):before {
+  right: 100%;
+  margin-right: -20px;
+}
+
+p:first-child {
+  border-top: 0;
+  border-top-right-radius: 0;
+  border-top-left-radius: 0;
+}
+
+p:last-child {
+  border-bottom-right-radius: 0;
+  border-bottom-left-radius: 0;
+}
+
+
+
+
+
+.diagonal-box {
+	background: linear-gradient(30deg, rgba(206, 143, 6, 0.75), rgba(255,246,0, .5));
+
+	transform: skewY(-25deg);
+  z-index: 99 !important;
+  top: 10%
+}
+.diagonal-box1 {
+	background: linear-gradient(30deg, rgba(206, 143, 6, 0.75), rgba(255,246,0, .5));
+	transform: skewY(-25deg);
+  z-index: 99 !important;
+  top: 45%
+}
+.diagonal-box2 {
+	background: linear-gradient(30deg, rgba(206, 143, 6, 0.75), rgba(255,246,0, .5));
+
+	transform: skewY(-25deg);
+  z-index: 99 !important;
+  top: 80%
+}
+.content { 	
+	height: 7em;
+  margin: 0 auto; 
+  padding-inline-start: 35%;
+}
+</style>
+<body>
+
+<!-- Navbar -->
+<div class="w3-top">
+  <div class="w3-bar blue-color w3-card">
+
+    <a href="https://waldmannly.github.io/" class="w3-bar-item w3-button w3-padding-large">HOME</a>
+    <a href="https://waldmannly.github.io/about.html" class="w3-bar-item w3-button w3-padding-large">ABOUT</a>
+
+  </div>
+</div>
+
+<!-- Navbar on small screens (remove the onclick attribute if you want the navbar to always show on top of the content when clicking on the links) -->
+<div id="navDemo" class="w3-bar-block w3-black w3-hide w3-hide-large w3-hide-medium w3-top" style="margin-top:46px">
+ <!-- <a href="#band" class="w3-bar-item w3-button w3-padding-large" onclick="myFunction()">BAND</a>
+  <a href="#tour" class="w3-bar-item w3-button w3-padding-large" onclick="myFunction()">TOUR</a>
+  <a href="#contact" class="w3-bar-item w3-button w3-padding-large" onclick="myFunction()">CONTACT</a>
+  <a href="#" class="w3-bar-item w3-button w3-padding-large" onclick="myFunction()">MERCH</a>-->
+</div>
+
+
+<div class="diagonal-box w3-top">
+  <div class="content">   
+    <div class="vertical-center">
+      <h3> Page Under Construction<h3>
+    </div>
+  </div>
+</div>
+<div class="diagonal-box1 w3-top">
+  <div class="content">   
+    <div class="vertical-center">
+      <h3> Page Under Construction<h3>
+    </div>
+  </div>
+</div>
+<div class="diagonal-box2 w3-top">
+  <div class="content">   
+    <div class="vertical-center">
+      <h3> Page Under Construction<h3>
+    </div>
+  </div>
+</div>
+
+
+<!-- Page content -->
+<div class="w3-content" style="max-width:2000px;margin-top:15px">
+	<div class="w3-container w3-content w3-center w3-padding-32" style="max-width:800px" id="band">
+    <h2 class="w3-wide">Projects and Timeline of Experiences - 2</h2>
+    <p class="w3-justify">
+        <br>
+
+        Listed below are some of the projects that I have played a large role in and experiences from my undergraduate education and on.
+
+        <br><br>
+        <b>2016</b><br>
+        One of the first and coolest experiences I was able to have at UCF, was not at UCF. During the Fall of 2016, I participated in UCF's Mathematics
+        exchange program with the Royal Melbourne Institute of Technology (RMIT), where I was able to spend six months living in Melbourne, Australia and
+        experiencing different cultures and lifestyles all the while studying math concepts such as Optimization, Modeling, Numerical Methods, and Analysis.
+        <br><br>
+        When I took Mathematical Biology II at UCF in the Spring of 2016, each student completed a PIC Math
+        project in which the goal was to model an aspect of cholera dynamics in Haiti.
+        In my project, I devised a socioeconomic class-structured model that captured
+        so interesting dynamics of how better access to sanitation reduced the total
+        infected populations.  <a href="https://github.com/waldmannly/Cholera-Modeling">Link to Github Repository</a>
+        <br><br>
+        <b>2017</b><br>
+        In the Spring of 2017, I started research in soundscape ecology under Jonathan Beever.
+        In my work under Dr. Beever, I oversaw data analysis and visualization.
+        I also started work on a project about sampling methodology in soundscape ecology that
+        I am currently working on turning into a manuscript.  <a href="https://github.com/waldmannly/Soundscape-Ecology-UCF">Link to Github Repository</a>
+        <br><br>
+        My first internship was at Ellucian in the Summer of 2017 where I was tasked with writing a Java program
+        to collect and analyze historic project data to determine a standard time frame for the completion of certain developments
+        and integrations. In addition to this analysis, I also assisted in designing an ETL and data migration
+        process for upgrading client databases to be compatible with the companies software.
+        <br><br>
+        <b>2018</b><br>
+        In the Spring of 2018, my team for COMAP's Mathematical Contest in Modeling (MCM) received an honorable
+        mention for modeling the extinction of languages (Problem B). By incorporating
+        existing language competition models and my knowledge of patch-based disease models,
+        we made a patch-based language competition model for the top 20 languages that
+        converted languages speakers based on the GDP of countries with the chosen languages
+        as their official language.  <a href="https://github.com/waldmannly/MCM-ProblemB-2018">Link to Github Repository</a>
+        <br><br>
+        In the Summer of 2018 I had the amazing chance to research at Harvard Forest
+        as part of its REU in Ecology at the Thompson Lab, where I modeled human response to fire across
+        Northern California using LANDIS-II. Using the Land Use Plus extension,
+        I implemented dynamic human response to fire in R. This consisted of minimizing
+        connected fuels across the landscape, post fire salvage logging, and reducing fuels
+        around developed areas hit by fire. <a href="https://github.com/hfjtlab/LANDIS_Klamath_REU2018">Link to Github Repository</a>
+        <br><br>
+        <b>2019</b><br>
+        In my senior year from Fall 2018 to Spring of 2019, I focused on helping out my peers at UCF.
+        As president of the UCF Collegiate Mathematical Society and Director of SIGAI (now AI@UCF), I was able to host workshops and meetings that enabled others to learn new technologies and come together to embrace each others inner nerd.
+        In my role as a Strong Mentor, I assisted three undergraduate transfer students in their first year at UCF where I was meeting with each of them weekly to help them navigate UCF and ensure their success going forward.
+        <br><br>
+        In the Fall of 2019, I joined Deloitte as a Software Developer in their Consulting branch where I continue learning new tools and technology.
+
+        <br><br>
+
+
+
+
+        <b>Links to other project repositories:</b>
+
+        <ul>
+            <li><center><a href="https://github.com/waldmannly/RtutorialCMS">Math Club R Workshop here</a></center></li>
+            <li><center><a href="https://github.com/waldmannly/Latex-Templates">Latex templates for Math Club Latex Workshop here</a></center></li>
+            <li><center><a href="https://github.com/waldmannly/railbaron-lookuptables">Java GUI for a railbaron board game helper app here</a></center></li>
+            <li><center><a href="https://github.com/waldmannly/Games">Trying to compile all of the one off games that I have programmed through out my courses here</a></center></li>
+            <li><center><a href="https://github.com/ucfsigai/data-science">I help run SIGAI@UCF which hosts its lectures/workshops here</a></center></li>
+            <li><center><a href="https://github.com/ucfsigai/data-science/blob/master/fa18/2018-10-24-heuristics/2018-10-24-heuristics.ipynb">Lecture on heuristics I created for SIGAI@UCF</a></center></li>
+        </ul> <br>
+    </p>
+		</div>
+
+
+
+  <!-- Automatic Slideshow Images -->
+
+  <div class="mySlides w3-display-container w3-center">
+    <img src="/images/rwksp.jpg" style="width:45%">
+    <div class="w3-display-bottommiddle w3-container w3-text-white w3-padding-16 w3-hide-small">
+      <h3>Hosting an R Workshop for the Actuarial Science Club </h3>
+
+    </div>
+  </div>
+  <br> <br> 
+  <!--  <p><b>image one!</b></p>
+  <div class="mySlides w3-display-container w3-center">
+    <img src="/images/two.jpg" style="width: 45%">
+    <div class="w3-display-bottommiddle w3-container w3-text-white w3-padding-16 w3-hide-small">
+      <h3>New </h3>
+      <p><b>image two.</b></p>
+    </div>
+  </div>
+  <div class="mySlides w3-display-container w3-center">
+    <img src="/images/three.jpg" style="width: 45%">
+    <div class="w3-display-bottommiddle w3-container w3-text-white w3-padding-16 w3-hide-small">
+      <h3>Chicago</h3>
+      <p><b>image three.</b></p>
+    </div>
+  </div>
+
+<br><br>-->
+  <!-- The Band Section -->
+
+  <!--  <div class="w3-row w3-padding-32">
+      <div class="w3-third">
+        <p>Name</p>
+        <img src="/w3images/bandmember.jpg" class="w3-round w3-margin-bottom" alt="Random Name" style="width:60%">
+      </div>
+      <div class="w3-third">
+        <p>Name</p>
+        <img src="/w3images/bandmember.jpg" class="w3-round w3-margin-bottom" alt="Random Name" style="width:60%">
+      </div>
+      <div class="w3-third">
+        <p>Name</p>
+        <img src="/w3images/bandmember.jpg" class="w3-round" alt="Random Name" style="width:60%">
+      </div>
+    </div>
+  </div>-->
+
+
+<!-- End Page Content -->
+</div>
+
+
+
+
+<!-- Footer  probably to change this...   -->
+<div class="w3-container w3-display-container w3-bottom">
+<footer class="w3-container w3-bottom w3-opacity blue-color w3-tiny">
+</div>
+<!--
+  <p class="w3-medium">Powered by <a href="https://www.w3schools.com/w3css/default.asp" target="_blank">w3.css</a></p>
+</footer>-->
+
+<script>
+// Automatic Slideshow - change image every 4 seconds
+var myIndex = 0;
+carousel();
+
+function carousel() {
+    var i;
+    var x = document.getElementsByClassName("mySlides");
+    for (i = 0; i < x.length; i++) {
+       x[i].style.display = "none";
+    }
+    myIndex++;
+    if (myIndex > x.length) {myIndex = 1}
+    x[myIndex-1].style.display = "block";
+    setTimeout(carousel, 6000);
+}
+
+// Used to toggle the menu on small screens when clicking on the menu button
+function myFunction() {
+    var x = document.getElementById("navDemo");
+    if (x.className.indexOf("w3-show") == -1) {
+        x.className += " w3-show";
+    } else {
+        x.className = x.className.replace(" w3-show", "");
+    }
+}
+
+// When the user clicks anywhere outside of the modal, close it
+var modal = document.getElementById('ticketModal');
+window.onclick = function(event) {
+  if (event.target == modal) {
+    modal.style.display = "none";
+  }
+}
+</script>
+
+
+<div class="container-fluid blue-bg">
+  <div class="container">
+    <h2 class="pb-3 pt-2">Vertical Left-Right Timeline</h2>
+    <!--first section-->
+    <div class="row align-items-center how-it-works">
+      <div class="col-2 text-center bottom">
+        <div class="circle">1</div>
+      </div>
+      <div class="col-6">
+        <h5>Fully Responsive</h5>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed porttitor gravida aliquam. Morbi orci urna, iaculis in ligula et, posuere interdum lectus.</p>
+      </div>
+    </div>
+    <!--path between 1-2-->
+    <div class="row timeline">
+      <div class="col-2">
+        <div class="corner top-right"></div>
+      </div>
+      <div class="col-8">
+        <hr/>
+      </div>
+      <div class="col-2">
+        <div class="corner left-bottom"></div>
+      </div>
+    </div>
+    <!--second section-->
+    <div class="row align-items-center justify-content-end how-it-works">
+      <div class="col-6 text-right">
+        <h5>Using Bootstrap</h5>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed porttitor gravida aliquam. Morbi orci urna, iaculis in ligula et, posuere interdum lectus.</p>
+      </div>
+      <div class="col-2 text-center full">
+        <div class="circle">2</div>
+      </div>
+    </div>
+    <!--path between 2-3-->
+    <div class="row timeline">
+      <div class="col-2">
+        <div class="corner right-bottom"></div>
+      </div>
+      <div class="col-8">
+        <hr/>
+      </div>
+      <div class="col-2">
+        <div class="corner top-left"></div>
+      </div>
+    </div>
+    <!--third section-->
+    <div class="row align-items-center how-it-works">
+      <div class="col-2 text-center top">
+        <div class="circle">2019</div>
+      </div>
+      <div class="col-6">
+        <h5>Now with Pug and Sass</h5>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed porttitor gravida aliquam. Morbi orci urna, iaculis in ligula et, posuere interdum lectus.</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+
+
+
+
+
+<main>
+  <p>Doggo ipsum long bois lotsa pats blep. What a nice floof ruff super chub very good spot, the neighborhood pupper lotsa pats. Borkdrive shibe shoober what a nice floof, borking doggo.</p>
+  <p>Shoober shooberino adorable doggo many pats, heckin good boys many pats pupper wrinkler, corgo maximum borkdrive. A frighten puggo wow very biscit.</p>
+  <p>Big ol h*ck adorable doggo vvv smol borking doggo with a long snoot for pats big ol, he made many woofs doing me a frighten puggo wow very biscit, ruff fat boi ruff long doggo. </p>
+  <p>Long bois mlem I am bekom fat wrinkler puggo maximum borkdrive big ol pupper I am bekom fat, fluffer vvv adorable doggo lotsa pats snoot. I am bekom fat ur givin me a spook length boy wow very biscit very good spot.</p>
+  <p>Doggo ipsum long bois lotsa pats blep. What a nice floof ruff super chub very good spot, the neighborhood pupper lotsa pats. Borkdrive shibe shoober what a nice floof, borking doggo.</p>
+</main>
+</body>
+</html>
+
+
+

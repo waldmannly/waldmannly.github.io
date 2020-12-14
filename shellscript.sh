@@ -8,6 +8,7 @@ hugo
 cp about.html public/about.html -f
 cp research.html public/research.html -f
 cp projects.html public/projects.html -f
+cp projects2.html public/projects2.html -f
 cp images public/images -f -r
 cp favicon.ico public/favicon.ico -f
 cp CNAME public/CNAME -f
