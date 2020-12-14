@@ -1,0 +1,17 @@
+# theme.toml template for a Hugo theme
+# See https://github.com/spf13/hugoThemes#themetoml for an example
+
+name = "Aerial"
+license = "Creative Commons Attribution 3.0 Unported"
+licenselink = "https://github.com/sethmacleod/aerial/blob/master/LICENSE.md"
+description = "Evan Waldmann is an undergraduate student at UCF studying Mathematics, Computer Science, and Statistics."
+homepage = "https://waldmannly.github.io/"
+tags = ["Evan Waldmann, Evan, Waldmann, Math, Computer Science, harvard, UCF,University of Central Florida, Modeling, Programmer, Statistician, Data, Scientist, Data Scientist, Mentor,STRONG Mentor, AI, Artifical Intelligence"]
+features = ["responsive"]
+min_version = 0.18
+
+[author]
+  name = "Evan Waldmann"
+  homepage = ""
+
+
