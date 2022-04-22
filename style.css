@@ -1,0 +1,115 @@
+* {
+  box-sizing: border-box;;
+}
+
+html {
+  font-family: Helvetica Neue, Helvetica, sans-serif;
+  position: relative;
+}
+/**************************************************************************/
+/***********************************MY CUSTOM RULES************************/
+/**************************************************************************/
+.background{
+  z-index: 100;
+  position: sticky;
+  top: 0;
+  left: 0;
+
+}
+
+body {
+  background: rgba(255, 255, 255, 0);
+  background-color: rgb(255, 255, 255);
+  margin: 0;
+  padding: 0;
+
+
+}
+  :root {
+    /* --base: 20px; */
+    --test:#0742c2;
+   
+    /*production build*/
+    /* --base: 30px; */
+    --lightMist: #a8a8a800;
+    --darkMist: #006a97;
+    --bgGradRight: #fff;
+    /*flowers*/
+    --clayred:#4c1e10;
+    --ruby:#7e2125;
+    --flagred:#f81415;
+  }
+
+.app {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+}
+
+div.container {
+  position: relative;
+}
+
+
+.app > h1 {
+  color: white;
+}
+
+.scene-container {
+  position: absolute;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+}
+
+
+svg {
+  position: absolute;
+}
+#scene-bg-svg {
+  height: 100%;
+  width: 100%;
+  background: rgba(255, 255, 255, 0);
+  /* border: 2px solid brown; */
+}
+
+#pond-svg {
+  position: absolute;
+    height: 100%;
+    width: 101%;
+    bottom: 0;
+  left: 0;
+}
+
+#tree-svg { /*targeted correctly*/
+  position: absolute; 
+  height: 100vh;
+  width: 100vw; 
+  top: 0;
+  left: 0;
+}
+#duck-svg {
+  bottom: 1vh;
+  right: 1vw; 
+  height: 25vh;
+  width: 35vw;
+}
+
+
+
+#swell-stop1 {
+  stop-opacity: 0;
+}
+#swell-stop2 {
+  stop-opacity: 0;
+}
+#swell-stop3 {
+  stop-opacity: 0;
+}
+#swell-stop4 {
+  stop-opacity: 0;
+}
+#msg {
+  z-index: 30;
+  color: black;
+}
