@@ -37,147 +37,186 @@ class Duck extends React.Component {
     return /*#__PURE__*/(
       React.createElement("svg", { id: "duck-svg", viewBox: "0 0 1080 250" }, /*#__PURE__*/
 
-      React.createElement("linearGradient", {
-        id: "reflection-grad",
-        x1: "63.9648",
-        x2: "63.9648",
-        y1: "180",
-        y2: "0",
-        gradientUnits: "userSpaceOnUse" }, /*#__PURE__*/
+        React.createElement("linearGradient", {
+          id: "reflection-grad",
+          x1: "504",
+          x2: "504",
+          y1: "1440",
+          y2: "0",
+          gradientUnits: "userSpaceOnUse" }, /*#__PURE__*/
 
-      
+        
 
-      React.createElement("stop", { offset: "0", stopOpacity: ".5" }), /*#__PURE__*/
-      React.createElement("stop", { offset: ".06747389", stopOpacity: ".4663" }), /*#__PURE__*/
-      React.createElement("stop", { offset: "1", stopOpacity: "0" })), /*#__PURE__*/
+        React.createElement("stop", { offset: "0", stopOpacity: ".5" }), /*#__PURE__*/
+        React.createElement("stop", { offset: ".06747389", stopOpacity: ".4663" }), /*#__PURE__*/
+        React.createElement("stop", { offset: "1", stopOpacity: "0" })), /*#__PURE__*/
 
-      React.createElement("path", {
-        fill: "url(#reflection-grad)",
-        transform: "scale(1 -1) translate(0,-256)",
-        d: "M122.435 94.609H68.174v-11.13h45.913c2.001 0 3.72 -1.42 4.098 -3.385c0.378 -1.965 -0.691 -3.921 -2.549 -4.665l-2.218 -0.887C91.582 65.807 75.382 47.521 69.271 25.044h11.425c6.904 0 12.522 -5.617 12.522 -12.522V4.174C93.218 1.869 91.349 0 89.043 0H64c-0.408 0 -0.866 0.067 -1.297 0.208c-0.007 0.003 -0.015 0.004 -0.023 0.006C31.015 10.77 9.739 40.288 9.739 73.666v5.639c0 2.305 1.869 4.174 4.174 4.174h45.913v11.13H5.565c-2.305 0 -4.174 1.869 -4.174 4.174c0 16.11 13.107 29.218 29.218 29.218h66.782c16.11 0 29.218 -13.107 29.218 -29.218C126.609 96.478 124.74 94.609 122.435 94.609zM68.174 8.348h16.696v4.174c0 2.301 -1.873 4.174 -4.174 4.174h-12.522V8.348zM68.174 44.644c6.736 12.537 16.46 22.934 28.239 30.487H68.174V44.644zM18.087 75.13v-1.464c0 -27.806 16.547 -52.608 41.739 -63.44c0 2.667 0 61.934 0 64.905H18.087zM97.391 119.652h-66.782c-10.078 0 -18.511 -7.182 -20.45 -16.696h107.683C115.902 112.471 107.47 119.652 97.391 119.652z" }), /*#__PURE__*/
+        // React.createElement("path", {
+        //   fill: "url(#reflection-grad)",
+        //   transform: "scale(1 -1) translate(0,-256)",
+        //   d: "M122.435 94.609H68.174v-11.13h45.913c2.001 0 3.72 -1.42 4.098 -3.385c0.378 -1.965 -0.691 -3.921 -2.549 -4.665l-2.218 -0.887C91.582 65.807 75.382 47.521 69.271 25.044h11.425c6.904 0 12.522 -5.617 12.522 -12.522V4.174C93.218 1.869 91.349 0 89.043 0H64c-0.408 0 -0.866 0.067 -1.297 0.208c-0.007 0.003 -0.015 0.004 -0.023 0.006C31.015 10.77 9.739 40.288 9.739 73.666v5.639c0 2.305 1.869 4.174 4.174 4.174h45.913v11.13H5.565c-2.305 0 -4.174 1.869 -4.174 4.174c0 16.11 13.107 29.218 29.218 29.218h66.782c16.11 0 29.218 -13.107 29.218 -29.218C126.609 96.478 124.74 94.609 122.435 94.609zM68.174 8.348h16.696v4.174c0 2.301 -1.873 4.174 -4.174 4.174h-12.522V8.348zM68.174 44.644c6.736 12.537 16.46 22.934 28.239 30.487H68.174V44.644zM18.087 75.13v-1.464c0 -27.806 16.547 -52.608 41.739 -63.44c0 2.667 0 61.934 0 64.905H18.087zM97.391 119.652h-66.782c-10.078 0 -18.511 -7.182 -20.45 -16.696h107.683C115.902 112.471 107.47 119.652 97.391 119.652z" }
+        // ), /*#__PURE__*/
 
+        React.createElement("path", {
+          fill: "none",
+          stroke: "url(#reflection-grad)",
+          strokeWidth: "25",
+          transform: "scale(.125  -.125) translate(-200,-2048)",
+          d: "M960,30 Q465,450 315,735 Q315,735 945,705 Q840,435 930,60 M990,30 Q1200,405 1590,690 Q1590,690 1590,690 Q1305,705 1035,660 Q1035,660 1035,660 Q1065,420 990,30"
+        }), /*#__PURE__*/
 
-      React.createElement("g", { className: "ripple-wake-collection", fill: "none", stroke: "#333", strokeMiterlimit: "10", transform: "translate(0,85)"}, /*#__PURE__*/
+        React.createElement("path", {
+          fill: "none",
+          stroke: "url(#reflection-grad)",
+          strokeWidth: "15",
+          transform: "scale(.125  -.125) translate(-200,-2048)",
+          d: "M975,810 L975,810 L960,30 L990,30 L1005,810 M1005,705 L1005,705 L1620,705 L1620,705 L1620,720 L1620,720 L1005,720"
+        }), /*#__PURE__*/
 
-       
-      React.createElement("linearGradient", {
-        id: "reflection-grad",
-        x1: "0",
-        x2: "100",
-        y1: "0",
-        y2: "0",
-        gradientUnits: "userSpaceOnUse" }), /*#__PURE__*/
-
-      // React.createElement("ellipse", { className: "ripple ripple-1", cx: "80.5", cy: "41", stroke: "#000", strokeWidth: "2.8528", rx: "61.2", ry: "4" }), /*#__PURE__*/
-      // React.createElement("ellipse", {
-      //   className: "ripple ripple-2",
-      //   cx: "90.9",
-      //   cy: "41",
-      //   stroke: "#1A1A1A",
-      //   strokeWidth: "2.4053",
-      //   rx: "68.3",
-      //   ry: "5.7" }), /*#__PURE__*/
-
-      // React.createElement("ellipse", { className: "ripple ripple-3", cx: "106.7", cy: "41", stroke: "#333", strokeWidth: "1.483", rx: "84", ry: "8" }), /*#__PURE__*/
-      // React.createElement("ellipse", {
-      //   className: "ripple ripple-4",
-      //   cx: "121.8",
-      //   cy: "41",
-      //   stroke: "var(--darkMist)",
-      //   strokeWidth: "1.8106",
-      //   rx: "98.9",
-      //   ry: "10.1" }), /*#__PURE__*/
-
-      // React.createElement("ellipse", {
-      //   className: "ripple ripple-5",
-      //   cx: "147.9",
-      //   cy: "41",
-      //   stroke: "#666",
-      //   strokeWidth: "1.0665",
-      //   rx: "124.7",
-      //   ry: "10" }), /*#__PURE__*/
-
-      // React.createElement("ellipse", {
-      //   className: "ripple ripple-6",
-      //   cx: "186.4",
-      //   cy: "41",
-      //   stroke: "gray",
-      //   strokeWidth: "1.3175",
-      //   rx: "163",
-      //   ry: "11.7" }), /*#__PURE__*/
-
-      // React.createElement("ellipse", {
-      //   className: "ripple ripple-7",
-      //   cx: "325.3",
-      //   cy: "41",
-      //   stroke: "#999",
-      //   strokeWidth: "1.7514",
-      //   rx: "301.3",
-      //   ry: "11.2" }), /*#__PURE__*/
+        React.createElement("path", {
+          fill: "none",
+          stroke: "url(#reflection-grad)",
+          strokeWidth: "40",
+          transform: "scale(.125  -.125) translate(-200,-2048)",
+          d: "M300,750 L300,750 L300,750 Q465,930 735,975 Q735,975 735,975 Q1050,1035 1440,1020 M300,750 Q1050,870 1830,780 M1440,1020 L1440,1020 L1605,1020 Q1695,1020 1710,1020 L1710,1020 L1710,915 Q1830,885 1830,780 "
+        }), /*#__PURE__*/
 
 
-      React.createElement("path", {
-        className: "wake wake-1",
-        fill: "url(#reflection-grad)",
-        stroke: "gray",
-        strokeMiterlimit: "10",
-        strokeWidth: ".7595",
-        d: "M40.2 33.2C145.3 22.3 217.8 9.6 426.4 7.3 548.9 5.9 745.6 11 804.1 1.1" }), /*#__PURE__*/
+        React.createElement("g", { className: "ripple-wake-collection", fill: "none", stroke: "#333", strokeMiterlimit: "10", transform: "translate(0,85)"}, /*#__PURE__*/
 
-      React.createElement("path", {
-        className: "wake wake-2",
-        fill: "url(#reflection-grad)",
-        stroke: "gray",
-        strokeMiterlimit: "10",
-        strokeWidth: ".5918",
-        d: "M41.8 46.8c103.8 10.5 175 24.5 380.4 31.5 120.6 4.1 327-2.7 384.8 6" }), /*#__PURE__*/
+        
+        React.createElement("linearGradient", {
+          id: "reflection-grad",
+          x1: "0",
+          x2: "100",
+          y1: "0",
+          y2: "0",
+          gradientUnits: "userSpaceOnUse" }), /*#__PURE__*/
 
-      React.createElement("path", {
-        className: "wake wake-3",
-        fill: "none",
-        stroke: "#333",
-        strokeMiterlimit: "15",
-        strokeWidth: ".455",
-        d: "M40.2 33.2C145.3 22.3 217.8 9.6 426.4 7.3 548.9 5.9 745.6 11 804.1 1.1" }), /*#__PURE__*/
+        // React.createElement("ellipse", { className: "ripple ripple-1", cx: "80.5", cy: "41", stroke: "#000", strokeWidth: "2.8528", rx: "61.2", ry: "4" }), /*#__PURE__*/
+        // React.createElement("ellipse", {
+        //   className: "ripple ripple-2",
+        //   cx: "90.9",
+        //   cy: "41",
+        //   stroke: "#1A1A1A",
+        //   strokeWidth: "2.4053",
+        //   rx: "68.3",
+        //   ry: "5.7" }), /*#__PURE__*/
 
-      React.createElement("path", {
-        className: "wake wake-4",
-        fill: "none",
-        stroke: "#333",
-        strokeMiterlimit: "15",
-        strokeWidth: ".1918",
-        d: "M41.8 46.8c103.8 10.5 175 24.5 380.4 31.5 120.6 4.1 327-2.7 384.8 6" })), /*#__PURE__*/
+        // React.createElement("ellipse", { className: "ripple ripple-3", cx: "106.7", cy: "41", stroke: "#333", strokeWidth: "1.483", rx: "84", ry: "8" }), /*#__PURE__*/
+        // React.createElement("ellipse", {
+        //   className: "ripple ripple-4",
+        //   cx: "121.8",
+        //   cy: "41",
+        //   stroke: "var(--darkMist)",
+        //   strokeWidth: "1.8106",
+        //   rx: "98.9",
+        //   ry: "10.1" }), /*#__PURE__*/
 
+        // React.createElement("ellipse", {
+        //   className: "ripple ripple-5",
+        //   cx: "147.9",
+        //   cy: "41",
+        //   stroke: "#666",
+        //   strokeWidth: "1.0665",
+        //   rx: "124.7",
+        //   ry: "10" }), /*#__PURE__*/
 
-      React.createElement("path", {
-        id: "duck-surfaced",
-        fill: "#0e0c0b",
-        d: "M122.435 94.609H68.174v-11.13h45.913c2.001 0 3.72 -1.42 4.098 -3.385c0.378 -1.965 -0.691 -3.921 -2.549 -4.665l-2.218 -0.887C91.582 65.807 75.382 47.521 69.271 25.044h11.425c6.904 0 12.522 -5.617 12.522 -12.522V4.174C93.218 1.869 91.349 0 89.043 0H64c-0.408 0 -0.866 0.067 -1.297 0.208c-0.007 0.003 -0.015 0.004 -0.023 0.006C31.015 10.77 9.739 40.288 9.739 73.666v5.639c0 2.305 1.869 4.174 4.174 4.174h45.913v11.13H5.565c-2.305 0 -4.174 1.869 -4.174 4.174c0 16.11 13.107 29.218 29.218 29.218h66.782c16.11 0 29.218 -13.107 29.218 -29.218C126.609 96.478 124.74 94.609 122.435 94.609zM68.174 8.348h16.696v4.174c0 2.301 -1.873 4.174 -4.174 4.174h-12.522V8.348zM68.174 44.644c6.736 12.537 16.46 22.934 28.239 30.487H68.174V44.644zM18.087 75.13v-1.464c0 -27.806 16.547 -52.608 41.739 -63.44c0 2.667 0 61.934 0 64.905H18.087zM97.391 119.652h-66.782c-10.078 0 -18.511 -7.182 -20.45 -16.696h107.683C115.902 112.471 107.47 119.652 97.391 119.652z" }), /*#__PURE__*/
+        // React.createElement("ellipse", {
+        //   className: "ripple ripple-6",
+        //   cx: "186.4",
+        //   cy: "41",
+        //   stroke: "gray",
+        //   strokeWidth: "1.3175",
+        //   rx: "163",
+        //   ry: "11.7" }), /*#__PURE__*/
 
-
-      React.createElement("ellipse", {
-        cx: "28.5",
-        cy: "15.2",
-        fill: "none",
-        stroke: "#BBBBBC",
-        strokeMiterlimit: "10",
-        strokeWidth: "1.0266",
-        rx: ".5",
-        ry: ".5" }), /*#__PURE__*/
-
-      React.createElement("ellipse", {
-        id: "duck-eye",
-        cx: "28.5",
-        cy: "15.2",
-        fill: "none",
-        stroke: "#BBBBBC",
-        strokeMiterlimit: "10",
-        strokeWidth: "1.0266",
-        rx: ".5",
-        ry: ".5" })));
+        // React.createElement("ellipse", {
+        //   className: "ripple ripple-7",
+        //   cx: "325.3",
+        //   cy: "41",
+        //   stroke: "#999",
+        //   strokeWidth: "1.7514",
+        //   rx: "301.3",
+        //   ry: "11.2" }), /*#__PURE__*/
 
 
+        React.createElement("path", {
+          className: "wake wake-1",
+          fill: "url(#reflection-grad)",
+          stroke: "gray",
+          strokeMiterlimit: "10",
+          strokeWidth: ".7595",
+          d: "M40.2 33.2C145.3 22.3 217.8 9.6 426.4 7.3 548.9 5.9 745.6 11 804.1 1.1" }), /*#__PURE__*/
 
+        React.createElement("path", {
+          className: "wake wake-2",
+          fill: "url(#reflection-grad)",
+          stroke: "gray",
+          strokeMiterlimit: "10",
+          strokeWidth: ".5918",
+          d: "M41.8 46.8c103.8 10.5 175 24.5 380.4 31.5 120.6 4.1 327-2.7 384.8 6" }), /*#__PURE__*/
+
+        React.createElement("path", {
+          className: "wake wake-3",
+          fill: "none",
+          stroke: "#333",
+          strokeMiterlimit: "15",
+          strokeWidth: ".455",
+          d: "M40.2 33.2C145.3 22.3 217.8 9.6 426.4 7.3 548.9 5.9 745.6 11 804.1 1.1" }), /*#__PURE__*/
+
+        React.createElement("path", {
+          className: "wake wake-4",
+          fill: "none",
+          stroke: "#333",
+          strokeMiterlimit: "15",
+          strokeWidth: ".1918",
+          d: "M41.8 46.8c103.8 10.5 175 24.5 380.4 31.5 120.6 4.1 327-2.7 384.8 6" })), /*#__PURE__*/
+
+
+        React.createElement("path", {
+          id: "duck-surfaced",
+          fill: "none",
+          stroke: "#0e0c0b",
+          strokeWidth: "25",
+          transform: "scale(.125  .125) translate(-200,0)",
+          d: "M960,30 Q465,450 315,735 Q315,735 945,705 Q840,435 930,60 M990,30 Q1200,405 1590,690 Q1590,690 1590,690 Q1305,705 1035,660 Q1035,660 1035,660 Q1065,420 990,30"
+        }), /*#__PURE__*/
+
+        React.createElement("path", {
+          id: "duck-surfaced",
+          fill: "none",
+          stroke: "#0e0c0b",
+          strokeWidth: "15",
+          transform: "scale(.125  .125) translate(-200,0)",
+          d: "M975,810 L975,810 L960,30 L990,30 L1005,810 M1005,705 L1005,705 L1620,705 L1620,705 L1620,720 L1620,720 L1005,720"
+        }), /*#__PURE__*/
+
+        React.createElement("path", {
+          id: "duck-surfaced",
+          fill: "none",
+          stroke: "#0e0c0b",
+          strokeWidth: "40",
+          transform: "scale(.125  .125) translate(-200,0)",
+          d: "M300,750 L300,750 L300,750 Q465,930 735,975 Q735,975 735,975 Q1050,1035 1440,1020 M300,750 Q1050,870 1830,780 M1440,1020 L1440,1020 L1605,1020 Q1695,1020 1710,1020 L1710,1020 L1710,915 Q1830,885 1830,780 "
+        }), /*#__PURE__*/
+
+
+
+        React.createElement("ellipse", {
+          cx: "28.5",
+          cy: "15.2",
+          fill: "none",
+          stroke: "#BBBBBC",
+          strokeMiterlimit: "10",
+          strokeWidth: "1.0266",
+          rx: ".5",
+          ry: ".5" }
+        ), /*#__PURE__*/
+      )
+
+
+    );
   }}
 
 
