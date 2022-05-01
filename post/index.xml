@@ -1,18 +1,24 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Posts on Evan Waldmann</title>
     <link>https://waldmannly.github.io/post/</link>
     <description>Recent content in Posts on Evan Waldmann</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>en-us</language><atom:link href="https://waldmannly.github.io/post/index.xml" rel="self" type="application/rss+xml" />
+    <language>en-us</language>
+    
+	<atom:link href="https://waldmannly.github.io/post/index.xml" rel="self" type="application/rss+xml" />
+    
+    
     <item>
       <title>Research</title>
       <link>https://waldmannly.github.io/post/research/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://waldmannly.github.io/post/research/</guid>
-      <description>Test about interests. More text. Examples stuffEven more stuff Link to CVlinkedin instagram</description>
+      <description>Test about interests. More text. Examples stuff
+Even more stuff Link to CV
+linkedin instagram</description>
     </item>
     
     <item>
@@ -21,7 +27,9 @@
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://waldmannly.github.io/post/projects/</guid>
-      <description>Test about interests. More text. Examples stuffEven more stuff Link to CVlinkedin instagram</description>
+      <description>Test about interests. More text. Examples stuff
+Even more stuff Link to CV
+linkedin instagram</description>
     </item>
     
     <item>
