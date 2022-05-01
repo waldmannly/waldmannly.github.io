@@ -12,7 +12,11 @@ html {
 .background{
   z-index: -100 !important;
   position: sticky !important;
-  position: -webkit-sticky !important;
+  position: -webkit-sticky;
+  position: -moz-sticky;
+  position: -o-sticky;
+  position: -ms-sticky;
+  position: sticky;
   top: 0 !important;
   left: 0 !important;
 

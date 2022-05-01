@@ -34,7 +34,7 @@ body {font-family: "Lato", sans-serif !important}
 .mySlides {display: none}
 .blue-color{color:#fff!important;background-color:#6F91AF!important}
 </style>
-<body>
+<body style="overscroll-behavior: contain">
 
 
 
@@ -214,6 +214,19 @@ body {font-family: "Lato", sans-serif !important}
       modal.style.display = "none";
     }
   }
+
+
+  function scrolling(){
+  $('.someElementScrollingLeft').on('scroll', function() {
+      let offset = $(this).scrollLeft();
+      /* For me it only didn't work on phones, so checking screen size */
+      if($( window ).width() <= 768)
+      {
+         let stickyElement = $('#background');
+         stickyElement.css("left", offset);
+       } 
+    });
+}
   </script>
 
 </body>
