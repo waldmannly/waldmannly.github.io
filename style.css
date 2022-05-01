@@ -10,10 +10,11 @@ html {
 /***********************************MY CUSTOM RULES************************/
 /**************************************************************************/
 .background{
-  z-index: -100;
-  position: sticky;
-  top: 0;
-  left: 0;
+  z-index: -100 !important;
+  position: sticky !important;
+  position: -webkit-sticky !important;
+  top: 0 !important;
+  left: 0 !important;
 
 }
 
@@ -59,7 +60,6 @@ div.container {
   position: absolute;
   width: 100vw;
   height: 100vh;
-  overflow: hidden;
 }
 
 
