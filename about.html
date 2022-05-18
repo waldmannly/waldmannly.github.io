@@ -29,9 +29,28 @@ STRONG Mentor, AI, Artifical Intelligence, Microsoft, Software, Engineer, cloud,
 <link type='text/css' href='https://fonts.googleapis.com/css?family=Lato:700' />
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <style>
-body {font-family: "Lato", sans-serif !important}
+:root {
+  --color-bg: #000000;
+  --color-fg: #ffffff;
+  --color-bg-blue: #4b6b87;
+}
+
+@media (prefers-color-scheme: light) {
+  :root {
+    --color-bg: #ffffff;
+    --color-fg: #000000;
+    --color-bg-blue: #6F91AF;
+  }
+}
+
+body 
+{
+  font-family: "Lato", sans-serif !important;
+  background-color: var(--color-bg);
+  color: var(--color-fg);
+}
 .mySlides {display: none}
-.blue-color{color:#fff!important;background-color:#6F91AF!important}
+.blue-color{color:#fff!important;background-color:var(--color-bg-blue)!important}
 </style>
 <body>
 
