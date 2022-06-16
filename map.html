@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Tracker</title>
+        <link rel="stylesheet" href="https://unpkg.com/leaflet@1.8.0/dist/leaflet.css"
+        integrity="sha512-hoalWLoI8r4UszCkZ5kL8vayOGVae1oxXe/2A4AO6J9+580uKHDO3JdHb7NzwwzK5xr/Fs0W40kiNHxM9vyTtQ=="
+        crossorigin=""/>
+
+        <script src="https://unpkg.com/leaflet@1.8.0/dist/leaflet.js"
+        integrity="sha512-BB3hKbKWOc9Ez/TAwyWxNXeoV9c1v6FIeYiBieIWkpLjauysF18NzgR1MBNBXf8/KABdlkX68nAhlwcDFLGPCQ=="
+        crossorigin=""></script>
+
+        <link rel="stylesheet" href="./mapstyle.css">
+        <script  src="./mapscript.js"></script>
+
+
+        <!-- Global site tag (gtag.js) - Google Analytics -->
+        <script async src="https://www.googletagmanager.com/gtag/js?id=G-CQ35F5G9FW"></script>
+        <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'G-CQ35F5G9FW');
+        gtag("event", "view_page", { page: "map_page" });
+        </script>
+    </head>
+
+    <body >
+        <div id="mapid" ></div>
+        <script>
+        var lat_coord = 24.62564;
+        var lon_coord = -82.87468; 
+        var map = L.map('mapid', {center: [lat_coord,lon_coord],zoom: 13});
+
+        L.tileLayer('http://{s}.tile.osm.org/{z}/{x}/{y}.png', {
+    attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OSM</a>'
+}).addTo(map);
+
+var marker = L.marker([24.6222, -82.87468]).addTo(map);
+
+
+var circle = L.circle([24.62, -82.89468], {
+    color: 'red',
+    fillColor: '#f03',
+    fillOpacity: 0.5,
+    radius: 500
+}).addTo(map);
+
+var polygon = L.polygon([
+    [24.62564, +0.08 -82.87468 -0.09],
+    [24.62064, +0.06 -82.87468 -0.09],
+    [24.5864, +0.047 -82.87468 -0.09]
+]).addTo(map);
+
+
+circle.bindPopup("I am a circle.");
+
+
+var popup1 = L.popup()
+    .setLatLng([24.62564, -82.87468])
+    .setContent("I am a standalone popup.")
+    .openOn(map);
+    // L.tileLayer.wms("http://mesonet.agron.iastate.edu/cgi-bin/wms/nexrad/n0r.cgi", {
+    // 	layers: 'nexrad-n0r-900913',
+    //     format: 'image/png',
+    //     transparent: true,
+    //     attribution: "Weather data © 2012 IEM Nexrad"
+    // }).addTo(map);
+    var popup = L.popup();
+
+function onMapClick(e) {
+    popup
+        .setLatLng(e.latlng)
+        .setContent("You clicked the map at " + e.latlng.toString())
+        .openOn(map);
+}
+
+map.on('click', onMapClick);
+
+var latlngs = [
+    [24.62564, -82.87468],
+    [24.52564, -80.87468],
+    [25.92564, -82.87468]
+];
+
+var distance =0; 
+for (var x in latlngs)
+{
+  console.log(latlngs[x])
+  var marker = L.marker([latlngs[x][0], latlngs[x][1]]).addTo(map);
+  if (x>0){
+    var thisL = L.latLng(latlngs[x][0], latlngs[x][1])
+    var lastL = L.latLng(latlngs[x-1][0], latlngs[x-1][1])
+    distance += lastL.distanceTo(thisL)/1000
+    console.log(distance + " km")
+  }
+  console.log([latlngs[x][0].toString() + " .... "+ latlngs[x][1].toString()] + " --- distance so far: " + distance + " km")
+  var stringToShow = latlngs[x][0].toString() + " .... "+ latlngs[x][1].toString() + " --- distance so far: " + Math.floor(distance) + " km"
+  marker.bindTooltip(stringToShow).openTooltip();
+}
+
+var planned = [
+    [25.92564, -82.87468],
+    [26.2564, -82.87468],
+];
+
+console.log(planned[planned.length-1])
+var marker = L.marker([planned[planned.length-1][0], planned[planned.length-1][1]]).addTo(map);
+var stringToShow = planned[planned.length-1][0].toString() + " .... "+ planned[planned.length-1][1].toString() + "\n We going here!"
+  marker.bindTooltip(stringToShow).openTooltip();
+
+
+var polyline = L.polyline(latlngs, {color: 'red', dashArray:"4 6", opacity: .75}).addTo(map);
+var polyline1 = L.polyline(planned, {color: 'blue', dashArray:"1", opacity: .75}).addTo(map);
+
+
+// zoom the map to the polyline
+map.fitBounds(polyline.getBounds());
+        </script>
+    </body>
+</html>
+<!-- https://leafletjs.com/
+
+json formatting of the locations VVVV
+https://leafletjs.com/examples/geojson/
+
+
+
+svg
+https://leafletjs.com/reference.html#svg
+
+
+custom icons 
+https://leafletjs.com/examples/custom-icons/
+https://leafletjs.com/reference.html#icon
+
+
+
+to have layers for full and last like 10 or so and have a check box 
+https://leafletjs.com/examples/layers-control/
+-->

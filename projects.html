@@ -27,9 +27,28 @@ STRONG Mentor, AI, Artifical Intelligence, Microsoft, Software, Engineer, cloud,
 <link type='text/css' href='https://fonts.googleapis.com/css?family=Lato:700' />
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <style>
-body {font-family: "Lato", sans-serif !important}
+:root {
+  --color-bg: #000000;
+  --color-fg: #ffffff;
+  --color-bg-blue: #4b6b87;
+}
+
+@media (prefers-color-scheme: light) {
+  :root {
+    --color-bg: #ffffff;
+    --color-fg: #000000;
+    --color-bg-blue: #6F91AF;
+  }
+}
+
+body 
+{
+  font-family: "Lato", sans-serif !important;
+  background-color: var(--color-bg);
+  color: var(--color-fg);
+}
 .mySlides {display: none}
-.blue-color{color:#fff!important;background-color:#6F91AF!important}
+.blue-color{color:#fff!important;background-color:var(--color-bg-blue)!important}
 </style>
 <body>
 
@@ -55,7 +74,7 @@ body {font-family: "Lato", sans-serif !important}
     <p class="w3-justify">
         <br>
         <b>2022</b><br>
-        Over the year and change I have spent at Microsoft, I have found my grove in cloud development working on Azure Compute. 
+        Over the year and change I have spent at Microsoft, I have found my groove in cloud development working on Azure Compute. 
         I am mainly maintaining, improving, and building upon fabric controller and AzSM which is in charge of the majority
         of virtual machine CRUD operations for the Azure Cloud Platform. Systems have to be available, reliable, fast, and built 
         rock solid as at our scale even the smallest bug could mean many hours lost mitigating livesite incidents. 
@@ -126,6 +145,7 @@ body {font-family: "Lato", sans-serif !important}
           <ul>
             <li><a href="http://trivi-le.com/">Trivi-le is a trivia question wordle clone</a></li>
             <li><a href="https://evanwaldmann.org/cover-letter">Star Wars crawl themed cover letter</a></li>
+            <li><a href="https://evanwaldmann.org/movie-ratings">R plots of movie ratings</a></li>
             <li><a href="https://evanwaldmann.org/tournament">WIP: Tournament bracket generator</a></li>
             <li><a href="https://evanwaldmann.org/rotten">Testing out in browser cropping and file uploads</a></li>
         </ul> <br>
