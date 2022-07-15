@@ -88,6 +88,31 @@ let galleryItems = [
     "thumb": "https://raw.githubusercontent.com/waldmannly/movie-ratings-analysis/main/Rating%20trends%20over%20Release%20Dates.png"
   },
   {
+      "id": "Top 50 Actors - num movies",
+    "url": "https://raw.githubusercontent.com/waldmannly/movie-ratings-analysis/main/Top%2050%20Actors%20-%20num%20movies.png",
+    "thumb": "https://raw.githubusercontent.com/waldmannly/movie-ratings-analysis/main/Top%2050%20Actors%20-%20num%20movies.png"
+  },
+  {
+      "id": "Bottom 50 Actors - num movies",
+      "url": "https://raw.githubusercontent.com/waldmannly/movie-ratings-analysis/main/Bottom%2050%20Actors%20-%20num%20movies.png",
+      "thumb": "https://raw.githubusercontent.com/waldmannly/movie-ratings-analysis/main/Bottom%2050%20Actors%20-%20num%20movies.png"
+  },
+  {
+    "id": "Top 50 Directors - num movies",
+    "url": "https://raw.githubusercontent.com/waldmannly/movie-ratings-analysis/main/Top%2050%20Directors%20-%20num%20movies.png",
+    "thumb": "https://raw.githubusercontent.com/waldmannly/movie-ratings-analysis/main/Top%2050%20Directors%20-%20num%20movies.png"
+  },
+  {
+    "id": "Bottom 50 Directors - num movies",
+    "url": "https://raw.githubusercontent.com/waldmannly/movie-ratings-analysis/main/Bottom%2050%20Directors%20-%20num%20movies.png",
+    "thumb": "https://raw.githubusercontent.com/waldmannly/movie-ratings-analysis/main/Bottom%2050%20Directors%20-%20num%20movies.png"
+  },
+  {
+    "id": "Rating trends over date.added.to.sheet",
+    "url": "https://raw.githubusercontent.com/waldmannly/movie-ratings-analysis/main/Rating%20trends%20over%20date.added.to.sheet.png",
+    "thumb": "https://raw.githubusercontent.com/waldmannly/movie-ratings-analysis/main/Rating%20trends%20over%20date.added.to.sheet.png"
+  },
+  {
     "id": "Rating versus Length (bad)",
     "url": "https://raw.githubusercontent.com/waldmannly/movie-ratings-analysis/main/rating%20v%20time.png",
     "thumb": "https://raw.githubusercontent.com/waldmannly/movie-ratings-analysis/main/rating%20v%20time.png"
