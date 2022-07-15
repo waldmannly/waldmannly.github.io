@@ -48,6 +48,11 @@ $('.gallery__track').on('click','.gallery__track__item',function(){
 
 let galleryItems = [
   {
+    "id": "Top 100 goon rated movies",
+    "url": "https://raw.githubusercontent.com/waldmannly/movie-ratings-analysis/main/top%20goon%20rated%20movies.png",
+    "thumb": "https://raw.githubusercontent.com/waldmannly/movie-ratings-analysis/main/top%20goon%20rated%20movies.png"
+  },
+  {
     "id": "Length Histogram",
     "url": "https://raw.githubusercontent.com/waldmannly/movie-ratings-analysis/main/time%20histogram.png",
     "thumb": "https://raw.githubusercontent.com/waldmannly/movie-ratings-analysis/main/time%20histogram.png"
