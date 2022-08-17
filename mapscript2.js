@@ -1,7 +1,4 @@
-(function (factory) {
-  typeof define === 'function' && define.amd ? define(factory) :
-  factory();
-}((function () { 'use strict';
+
 
   /**
    * The code was extracted from:
@@ -119,7 +116,7 @@
       }
   }
 
-})));
+
 //# sourceMappingURL=jwt-decode.js.map
 
 
@@ -129,7 +126,7 @@ function onSignIn(response) {
     // to decode the credential response.
     console.log(response);
     console.log(response.credential);
-    const responsePayload = this.jwtDecode(response.credential);
+    const responsePayload = jwtDecode(response.credential);
     console.log(responsePayload);
 
     console.log("ID: " + responsePayload.sub);
