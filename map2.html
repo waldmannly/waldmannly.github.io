@@ -19,7 +19,7 @@
         <script async src="https://www.googletagmanager.com/gtag/js?id=G-CQ35F5G9FW"></script>
         <meta name="google-signin-scope" content="profile email">
         <meta name="google-signin-client_id" content="911449091744-610f1r04hlamh4hrnrm5j914ph9csfp1.apps.googleusercontent.com">
-        <script src="https://apis.google.com/js/platform.js" async defer></script>
+        <script src="https://accounts.google.com/gsi/client" async defer></script>
         <script>
         window.dataLayer = window.dataLayer || [];
         function gtag(){dataLayer.push(arguments);}
@@ -30,8 +30,12 @@
         </script>
     </head>
 
-    <body >
-        <div class="g-signin2" data-onsuccess="onSignIn" data-theme="dark"></div>
+    <body >    
+        <div id="g_id_onload"
+            data-client_id="YOUR_CLIENT_ID"
+            data-callback="onSignIn">
+        </div>
+        <div class="g_id_signin" data-type="standard" style="z-index:99;"></div>
         <script>
           function onSignIn(googleUser) {
             // Useful data for your client-side scripts:
@@ -48,7 +52,7 @@
             console.log("ID Token: " + id_token);
           }
         </script>
-        <!-- <div id="mapid" ></div> -->
+        <div id="mapid" ></div>
         <script>
         var lat_coord = 24.62564;
         var lon_coord = -82.87468; 
