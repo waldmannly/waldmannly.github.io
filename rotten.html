@@ -6,8 +6,21 @@
   <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/croppie/2.6.3/croppie.min.js"></script>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/croppie/2.6.3/croppie.min.css">
   </link>
+
+
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-CQ35F5G9FW"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-CQ35F5G9FW');
+  gtag("event", "view_page", { page: "rotten_page" });
+</script>
+
 </head>
-<title>test</title>
+<title>rotten eggs</title>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
@@ -17,18 +30,28 @@
 <link rel="stylesheet" href="croppie.css" />
 <link rel="stylesheet" href="demo.css" />
 <style>
-  body {
-    font-family: "Lato", sans-serif
-  }
+:root {
+  --color-bg: #000000;
+  --color-fg: #ffffff;
+  --color-bg-blue: #4b6b87;
+}
 
-  .mySlides {
-    display: none
+@media (prefers-color-scheme: light) {
+  :root {
+    --color-bg: #ffffff;
+    --color-fg: #000000;
+    --color-bg-blue: #6F91AF;
   }
+}
 
-  .blue-color {
-    color: #fff !important;
-    background-color: #6F91AF !important
-  }
+body 
+{
+  font-family: "Lato", sans-serif !important;
+  background-color: var(--color-bg);
+  color: var(--color-fg);
+}
+.mySlides {display: none}
+.blue-color{color:#fff!important;background-color:var(--color-bg-blue)!important}
 
   #project-image-container {
     min-width: 500px;
@@ -57,6 +80,17 @@
 <body>
 
 
+
+  <div class="background ">      <!-- this is the sail boat div-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+    <link rel="stylesheet" href="./style.css">
+      <div id="app" class="background"></div>
+      <!-- partial -->
+        <script src='https://cdnjs.cloudflare.com/ajax/libs/react/15.6.1/react.min.js'></script>
+      <script src='https://cdnjs.cloudflare.com/ajax/libs/react/15.6.1/react-dom.min.js'></script>
+      <script src='https://cdnjs.cloudflare.com/ajax/libs/gsap/1.20.3/TweenMax.min.js'></script><script  src="./script.js"></script>
+  </div>
+  
 
   <!-- 
   <script src="js\jquery.js"></script>
@@ -93,6 +127,8 @@
 
 
       </p>
+
+
     </div>
 
 
@@ -274,13 +310,15 @@
       </div>
 
     </div>
+
   </div>
+  <div class="" style="flex-grow: 2;"></div>
   <!-- Footer-->
-  <footer class="w3-container w3-padding-16 w3-center w3-opacity blue-color w3-tiny">
+  <!-- <footer class="w3-padding-16 w3-center w3-opacity blue-color w3-tiny"> -->
     <!--
   <p class="w3-medium">Powered by <a href="https://www.w3schools.com/w3css/default.asp" target="_blank">w3.css</a></p>
--->
-  </footer>
+
+  </footer>-->
   <!-- <script>
 // Automatic Slideshow - change image every 4 seconds
 var myIndex = 0;
