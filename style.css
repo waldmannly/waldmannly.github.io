@@ -3,7 +3,7 @@
 }
 
 html {
-  font-family: Helvetica Neue, Helvetica, sans-serif;
+  
   position: relative;
 }
 /**************************************************************************/
@@ -22,8 +22,8 @@ html {
   }
   
 body {
-  background: rgba(255, 255, 255, 0);
-  background-color: rgb(255, 255, 255);
+  /* background: rgba(255, 255, 255, 0);
+  background-color: rgb(255, 255, 255); */
   margin: 0;
   padding: 0;
 
@@ -56,7 +56,7 @@ div.container {
 
 
 .app > h1 {
-  color: white;
+  /* color: white; */
 }
 
 .scene-container {
@@ -72,7 +72,7 @@ svg {
 #scene-bg-svg {
   height: 100%;
   width: 100%;
-  background: rgba(255, 255, 255, 0);
+  /* background: rgba(255, 255, 255, 0); */
   /* border: 2px solid brown; */
 }
 
@@ -114,5 +114,5 @@ svg {
 }
 #msg {
   z-index: 30;
-  color: black;
+  /* color: black; */
 }
