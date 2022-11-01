@@ -2,17 +2,6 @@
 /****************DUCK COMPONENT*************************/
 /********************************************************/
 
-function scrolling(){
-  $('.someElementScrollingLeft').on('scroll', function() {
-      let offset = $(this).scrollLeft();
-      /* For me it only didn't work on phones, so checking screen size */
-      if($( window ).width() <= 768)
-      {
-         let stickyElement = $('#background');
-         stickyElement.css("left", offset);
-       } 
-    });
-}
 
 class Duck extends React.Component {
   constructor(props) {
