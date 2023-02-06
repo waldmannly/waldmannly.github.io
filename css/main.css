@@ -1094,3 +1094,26 @@
 .count-particles {
   border-radius: 0 0 3px 3px;
 }
+
+
+
+
+.middle{
+}
+.middle h1{
+	font-size: 125px;
+	font-weight: 1200;
+	color: #ffffff96;
+	background-image: url(https://res.cloudinary.com/drcrre4xg/image/upload/v1571101002/water_zvupjx.png);
+	background-size: 60% 150%;
+	-webkit-background-clip:text;
+	animation: water 15s infinite;
+}
+@keyframes water {
+	from{
+		background-position: left 0 top 0;
+	}
+	to{
+		background-position: left 100% top 0;
+	}
+}
