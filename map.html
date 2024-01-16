@@ -24,6 +24,18 @@
 
         gtag('config', 'G-CQ35F5G9FW');
         gtag("event", "view_page", { page: "map_page" });
+
+
+        /*
+        fetch('https://gorillawiz.com/get_coords', {
+        mode: 'no-cors',
+        method: 'GET'
+        })
+        .then(response => response.json())
+        .then(json => console.log(json))
+        .catch(error => console.log('Authorization failed : ' + error.message));
+        */
+
         </script>
     </head>
 
@@ -38,6 +50,7 @@
     attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OSM</a>'
 }).addTo(map);
 
+/*
 var marker = L.marker([24.6222, -82.87468]).addTo(map);
 
 
@@ -53,11 +66,10 @@ var polygon = L.polygon([
     [24.62064, +0.06 -82.87468 -0.09],
     [24.5864, +0.047 -82.87468 -0.09]
 ]).addTo(map);
-
-
 circle.bindPopup("I am a circle.");
+*/
 
-
+/*
 var popup1 = L.popup()
     .setLatLng([24.62564, -82.87468])
     .setContent("I am a standalone popup.")
@@ -69,6 +81,7 @@ var popup1 = L.popup()
     //     attribution: "Weather data © 2012 IEM Nexrad"
     // }).addTo(map);
     var popup = L.popup();
+    */
 
 function onMapClick(e) {
     popup
@@ -79,45 +92,121 @@ function onMapClick(e) {
 
 map.on('click', onMapClick);
 
-var latlngs = [
-    [24.62564, -82.87468],
-    [24.52564, -80.87468],
-    [25.92564, -82.87468]
-];
+var getJSON = function(url, callback) {
+            var xhr = new XMLHttpRequest();
+            xhr.open('GET', url, true);
+            xhr.responseType = 'json';
+            xhr.onload = function() {
+            var status = xhr.status;
+            if (status === 200) {
+                callback(null, xhr.response);
+            } else {
+                callback(status, xhr.response);
+            }
+            };
+            xhr.send();
+        };
 
-var distance =0; 
-for (var x in latlngs)
+
+
+getJSON('https://gorillawiz.com/get_coords',
+function(err, data) 
 {
-  console.log(latlngs[x])
-  var marker = L.marker([latlngs[x][0], latlngs[x][1]]).addTo(map);
-  if (x>0){
-    var thisL = L.latLng(latlngs[x][0], latlngs[x][1])
-    var lastL = L.latLng(latlngs[x-1][0], latlngs[x-1][1])
-    distance += lastL.distanceTo(thisL)/1000
-    console.log(distance + " km")
-  }
-  console.log([latlngs[x][0].toString() + " .... "+ latlngs[x][1].toString()] + " --- distance so far: " + distance + " km")
-  var stringToShow = latlngs[x][0].toString() + " .... "+ latlngs[x][1].toString() + " --- distance so far: " + Math.floor(distance) + " km"
-  marker.bindTooltip(stringToShow).openTooltip();
-}
+    if (err !== null) {
+        //alert('Something went wrong: ' + err);
+        console.log("error occurred in webcall")
+    } 
+    else 
+    {
+        //alert('Your query count: ' + data.query.count);
+        //console.log(data.query.count)
+        //console.log(data.query)
+        console.log(data)
+        //data.sort(function(a,b){return a[0].localeCompare(b[0]);});
+        console.log(data)
+        var latlngs = Object.keys(data).map(function(key){
+            return data[key];
+        });
+        latlngs.sort(function(a,b){return a[0].localeCompare(b[0]);});
+        var latlngs2 = Object.keys(latlngs).map(function(key){
+            return [latlngs[key][1] , latlngs[key][2]];
+        });
 
-var planned = [
-    [25.92564, -82.87468],
-    [26.2564, -82.87468],
-];
+        /*var latlngs = [
+            [24.62564, -82.87468],
+            [24.52564, -80.87468],
+            [25.92564, -82.87468]
+        ];*/
 
-console.log(planned[planned.length-1])
-var marker = L.marker([planned[planned.length-1][0], planned[planned.length-1][1]]).addTo(map);
-var stringToShow = planned[planned.length-1][0].toString() + " .... "+ planned[planned.length-1][1].toString() + "\n We going here!"
-  marker.bindTooltip(stringToShow).openTooltip();
+        console.log(latlngs);
+        console.log(latlngs2);
+
+        function fold(s, n, useSpaces, a) {
+            a = a || [];
+            if (s.length <= n) {
+                a.push(s);
+                return a;
+            }
+            var line = s.substring(0, n);
+            if (! useSpaces) { // insert newlines anywhere
+                a.push(line);
+                return fold(s.substring(n), n, useSpaces, a);
+            }
+            else { // attempt to insert newlines after whitespace
+                var lastSpaceRgx = /\s(?!.*\s)/;
+                var idx = line.search(lastSpaceRgx);
+                var nextIdx = n;
+                if (idx > 0) {
+                    line = line.substring(0, idx);
+                    nextIdx = idx;
+                }
+                a.push(line);
+                return fold(s.substring(nextIdx), n, useSpaces, a);
+            }
+        }
+
+        var distance =0; 
+        for (var x in latlngs)
+        {
+        console.log(latlngs[x])
+        var marker = L.marker([latlngs[x][1], latlngs[x][2]]).addTo(map);
+        if (x>0){
+            var thisL = L.latLng(latlngs[x][1], latlngs[x][2])
+            var lastL = L.latLng(latlngs[x-1][1], latlngs[x-1][2])
+            distance += lastL.distanceTo(thisL)/1000
+            console.log(distance + " km")
+        }
+        console.log([latlngs[x][1].toString() + " , "+ latlngs[x][2].toString()] + "\nNOTE: "+ latlngs[x][3].toString()+ "\n --- distance so far: " + distance + " km" + "\ntimestamp: " + latlngs[x][0].toString() )
+        var stringToShow = (["Coordinates: " + latlngs[x][1].toString() + " , "+ latlngs[x][2].toString()] + "<br/>Timestamp: " + latlngs[x][0].toString() + "<br/><br/>Location Note: "+  fold(latlngs[x][3].toString(), 50, true).join('<br/>')+ "<br/><br/>Unobstructed path distance: " + distance + " km" )
+        marker.bindTooltip(stringToShow).openTooltip();
+        }
 
 
-var polyline = L.polyline(latlngs, {color: 'red', dashArray:"4 6", opacity: .75}).addTo(map);
-var polyline1 = L.polyline(planned, {color: 'blue', dashArray:"1", opacity: .75}).addTo(map);
+        /*
+        var planned = [
+            [25.92564, -82.87468],
+            [26.2564, -82.87468],
+        ];
+
+        console.log(planned[planned.length-1])
+        var marker = L.marker([planned[planned.length-1][0], planned[planned.length-1][1]]).addTo(map);
+        var stringToShow = planned[planned.length-1][0].toString() + " .... "+ planned[planned.length-1][1].toString() + "\n We going here!"
+        marker.bindTooltip(stringToShow).openTooltip();
+        */
+
+        var polyline = L.polyline(latlngs2, {color: 'red', dashArray:"4 6", opacity: .75}).addTo(map);
+        //planned lines
+        //var polyline1 = L.polyline(planned, {color: 'blue', dashArray:"1", opacity: .75}).addTo(map);
 
 
-// zoom the map to the polyline
-map.fitBounds(polyline.getBounds());
+        // zoom the map to the polyline
+        map.fitBounds(polyline.getBounds());
+    }
+});
+
+
+
+
         </script>
     </body>
 </html>
