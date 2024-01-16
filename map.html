@@ -177,7 +177,7 @@ function(err, data)
             console.log(distance + " km")
         }
         console.log([latlngs[x][1].toString() + " , "+ latlngs[x][2].toString()] + "\nNOTE: "+ latlngs[x][3].toString()+ "\n --- distance so far: " + distance + " km" + "\ntimestamp: " + latlngs[x][0].toString() )
-        var stringToShow = (["Coordinates: " + latlngs[x][1].toString() + " , "+ latlngs[x][2].toString()] + "<br/>Timestamp: " + latlngs[x][0].toString() + "<br/><br/>Location Note: "+  fold(latlngs[x][3].toString(), 50, true).join('<br/>')+ "<br/><br/>Unobstructed path distance: " + distance + " km" )
+        var stringToShow = (["Coordinates: " + latlngs[x][1].toString() + " , "+ latlngs[x][2].toString()] + "<br/>Timestamp: " + latlngs[x][0].toString() + "<br/><br/>Location Note: "+  fold(latlngs[x][3].toString(), 50, true).join('<br/>')+ "<br/><br/>Unobstructed path distance: " + distance*.621371 + " miles" )
         marker.bindTooltip(stringToShow).openTooltip();
         }
 
