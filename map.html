@@ -166,19 +166,29 @@ function(err, data)
         }
 
         var distance =0; 
+        var count =0; 
         for (var x in latlngs)
         {
-        console.log(latlngs[x])
-        var marker = L.marker([latlngs[x][1], latlngs[x][2]]).addTo(map);
-        if (x>0){
-            var thisL = L.latLng(latlngs[x][1], latlngs[x][2])
-            var lastL = L.latLng(latlngs[x-1][1], latlngs[x-1][2])
-            distance += lastL.distanceTo(thisL)/1000
-            console.log(distance + " km")
-        }
-        console.log([latlngs[x][1].toString() + " , "+ latlngs[x][2].toString()] + "\nNOTE: "+ latlngs[x][3].toString()+ "\n --- distance so far: " + distance + " km" + "\ntimestamp: " + latlngs[x][0].toString() )
-        var stringToShow = (["Coordinates: " + latlngs[x][1].toString() + " , "+ latlngs[x][2].toString()] + "<br/>Timestamp: " + latlngs[x][0].toString() + "<br/><br/>Location Note: "+  fold(latlngs[x][3].toString(), 50, true).join('<br/>')+ "<br/><br/>Unobstructed path distance: " + distance*.621371 + " miles" )
-        marker.bindTooltip(stringToShow).openTooltip();
+            console.log(latlngs[x])
+            var marker = L.marker([latlngs[x][1], latlngs[x][2]]).addTo(map);
+            if (x>0){
+                var thisL = L.latLng(latlngs[x][1], latlngs[x][2])
+                var lastL = L.latLng(latlngs[x-1][1], latlngs[x-1][2])
+                distance += lastL.distanceTo(thisL)/1000
+                console.log(distance + " km")
+            }
+
+            //parseFloat("123.456").toFixed(2)
+            console.log([latlngs[x][1].toString() + " , "+ latlngs[x][2].toString()] + "\nNOTE: "+ latlngs[x][3].toString()+ "\n --- distance so far: " + distance + " km" + "\ntimestamp: " + latlngs[x][0].toString() )
+            var stringToShow = (["Coordinates: " + parseFloat(latlngs[x][1].toString()).toFixed(5) + " , "+ parseFloat(latlngs[x][2].toString()).toFixed(5)] + "<br/>Timestamp: " + latlngs[x][0].toString() + "<br/><br/>Location Note: "+  fold(latlngs[x][3].toString(), 50, true).join('<br/>')+ "<br/><br/>Unobstructed path distance: " + Math.round(distance*.621371) + " miles" )
+            
+            if (count == latlngs.length-1)
+            {
+                stringToShow = "----- NEWEST ENTRY -----<br/><br/>" + stringToShow
+            }
+
+                marker.bindTooltip(stringToShow).openTooltip();
+                count = count + 1; 
         }
 
 
