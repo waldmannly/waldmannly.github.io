@@ -49,6 +49,44 @@ body
 }
 .mySlides {display: none}
 .blue-color{color:#fff!important;background-color:var(--color-bg-blue)!important}
+
+.show-hide-text {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.show-hide-text a {
+  order: 2;
+}
+
+.show-hide-text p {
+  position: relative;
+  overflow: hidden;
+  max-height: 500px;
+}
+
+.show-hide-text p {
+  display: -webkit-box;
+  -webkit-line-clamp: 35;
+  -webkit-box-orient: vertical;
+}
+
+.show-less {
+  display: none;
+}
+
+.show-less:target {
+  display: block;
+}
+
+.show-less:target ~ p {
+  display: block;
+  max-height: 100%;
+}
+
+.show-less:target + a {
+  display: none;
+}
 </style>
 <body>
 
@@ -84,6 +122,7 @@ body
 
 	<div class="w3-container w3-content w3-padding-32" style="max-width:800px" id="band">
     <h2 class="w3-wide w3-center">Jobs, Experiences, and Projects</h2>
+    <h4 class="w3-wide w3-center">(in no particular order)</h4>
     <p class="w3-justify">
 
 	            <br>
@@ -95,14 +134,14 @@ body
             <li>The footer on this page and a few others on my site is an animated react app</li>
             <li><a href="https://evanwaldmann.org/movie-ratings">R plots of movie ratings</a></li>
             <li><a href="https://evanwaldmann.org/hack">fun hacker style animations</a></li>
-            <li><a href="https://evanwaldmann.org/map">WIP (work-in-progress): map/location tracker</a></li>
+            <li><a href="https://evanwaldmann.org/map">WIP (work-in-progress/sometimes backend is down): map/location tracker</a></li>
             <li><a href="https://evanwaldmann.org/tournament">WIP: Tournament bracket generator</a></li>
             <li><a href="https://evanwaldmann.org/rotten">Testing out in browser cropping and file uploads</a></li>
         </ul>
 
 		<br><br>
 
-          <b>Links to my other project repositories:</b>
+          <b>Links to my other random project repositories from college:</b>
 
           <ul>
               <li><a href="https://github.com/waldmannly/RtutorialCMS">Math Club R Workshop here</a></li>
@@ -113,9 +152,23 @@ body
               <li><a href="https://github.com/ucfsigai/data-science/blob/master/fa18/2018-10-24-heuristics/2018-10-24-heuristics.ipynb">Lecture on heuristics I created for SIGAI@UCF</a></li>
           </ul> <br>
         </div>
+        <div class="show-hide-text">
+          <a  id="show-more" class="show-less" href="#show-less">Show less</a>
+          <a  id="show-less" class="show-more" href="#show-more">Show more</a>
+        <p>
 
-				<br>
-        <br>
+        <b>2025</b><br>
+        Looking forward to the exciting things to come!
+
+        <br><br>
+        <b>2024</b><br>
+        Moved back home to Florida and continued to work for Microsoft remotely.
+
+        <br><br>
+        <b>2023</b><br>
+        Spent time enjoying the many things Seattle has to offer while working for Azure Core doing mainly backend software eng work.
+
+        <br><br>
         <b>2022</b><br>
         Over the year and change I have spent at Microsoft, I have found my groove in cloud development working on Azure Compute.
         I am mainly maintaining, improving, and building upon fabric controller and AzSM which is in charge of the majority
@@ -182,7 +235,11 @@ body
         In my project, I devised a socioeconomic class-structured model that captured
         some interesting dynamics of how better access to sanitation reduced the total
         infected populations.  <a href="https://github.com/waldmannly/Cholera-Modeling">Link to Github Repository</a>
+
+      </p>
+    </div>
     </p>
+
 		</div>
 
   <div class="mySlides w3-display-container w3-center" style="z-index:-102; margin-bottom: 50px;">
