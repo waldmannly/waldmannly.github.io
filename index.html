@@ -1,95 +1,229 @@
-<!DOCTYPE HTML>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Evan Waldmann — Applied Mathematician, Software Engineer, Big Nerd. Orlando, FL.">
+  <title>Evan Waldmann</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-CQ35F5G9FW"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-CQ35F5G9FW');
+  </script>
+</head>
+<body>
 
-<html>
+<div class="pipboy">
+
+  <!-- Sidebar -->
+  <aside class="sidebar">
+    <a href="index.html" class="name">Evan Waldmann</a>
+    <div class="dots">
+      <div class="dot"></div>
+      <div class="dot"></div>
+      <div class="dot"></div>
+      <div class="dot"></div>
+      <div class="dot"></div>
+    </div>
+  </aside>
+
+  <!-- Main -->
+  <div class="main">
+    <div class="screen-frame">
+
+      <!-- Status bar -->
+      <div class="status-bar">
+        <span class="online">SYSTEM ACTIVE</span>
+        <span>2026.05.01</span>
+      </div>
+
+      <!-- Nav -->
+      <div class="tabs">
+        <a href="index.html" class="active">HOME</a>
+        <a href="about.html">ABOUT</a>
+        <a href="projects.html">PROJECTS</a>
+        <a href="lab.html">LAB</a>
+        <a href="blog.html">BLOG</a>
+      </div>
+
+      <!-- Page content -->
+            <!-- Hero -->
+      <div class="hero-block fade-in">
+        <div class="hero-row">
+          <div class="hero-text">
+            <h2>Software<br>Engineer</h2>
+            <div class="bio">
+              Software Engineer at Microsoft — Azure Compute. UCF grad in math, CS, and statistics. Loud, driven, probably a little annoying. Builder of things. Breaker of things.
+            </div>
+          </div>
+          <pre class="ascii-logo" aria-hidden="true">
+███████ ███    ███ ██     ██
+██      ████  ████ ██     ██
+██████  ██ ████ ██ ██  █  ██
+██      ██  ██  ██ ██ ███ ██
+███████ ██      ██  ███ ███ </pre>
+        </div>
+      </div>
+
+      <!-- Now -->
+      <div class="sec-label fade-in">// status log</div>
+      <hr class="sec-rule">
+      <div class="now-box reveal">
+        <div class="date">May 2026</div>
+        <p data-typewrite="25">Building Service Fabric RP at Microsoft by day. Running in the Orlando heat by night. Mass-producing side projects.<br> Generally thriving . . . . . <br> What's next?<span class="cursor"></span></p>
+      </div>
+
+      <!-- Projects (top 6) -->
+      <div class="sec-label fade-in">// projects</div>
+      <hr class="sec-rule">
+
+      <table class="proj-table reveal">
+        <tr>
+          <th>Name</th>
+          <th>Description</th>
+          <th>Type</th>
+        </tr>
+        <tr>
+          <td><a href="https://bloom.gorillawiz.com" class="pname">Bloom</a></td>
+          <td class="pdesc">Open-source, self-hosted period tracker — single Go binary, no cloud, no ads, partner dashboard</td>
+          <td><span class="ptag">APP</span></td>
+        </tr>
+        <tr>
+          <td><a href="https://shifttok.com" class="pname">ShiftTok</a></td>
+          <td class="pdesc">Social platform for spotting and sharing vehicles on the road</td>
+          <td><span class="ptag">APP</span></td>
+        </tr>
+        <tr>
+          <td><a href="https://waldmannly.itch.io/castle" class="pname">Castle</a></td>
+          <td class="pdesc">Old school tower defense with online multiplayer, 30+ waves, 3 maps — Python remake of the BYOND classic</td>
+          <td><span class="ptag">GAME</span></td>
+        </tr>
+        <tr>
+          <td><a href="https://hanabiko.gorillawiz.com" class="pname">Koko</a></td>
+          <td class="pdesc">Open-source chat platform with a public server browser (Hanabiko)</td>
+          <td><span class="ptag">APP</span></td>
+        </tr>
+        <tr>
+          <td><a href="https://throwdown.gorillawiz.com" class="pname">Throwdown</a></td>
+          <td class="pdesc">Rock Paper Scissors battle royale game</td>
+          <td><span class="ptag">APP</span></td>
+        </tr>
+        <tr>
+          <td><a href="/movie-ratings.html" class="pname">Movie Ratings</a></td>
+          <td class="pdesc">15+ interactive R visualizations of personal movie rating data — actor rankings, trends, top 100</td>
+          <td><span class="ptag">DATA</span></td>
+        </tr>
+        <tr>
+          <td><a href="/trivi-le.html" class="pname">Trivi-le</a></td>
+          <td class="pdesc">Daily trivia Wordle clone — guess the answer in 6 tries</td>
+          <td><span class="ptag">APP</span></td>
+        </tr>
+        <tr>
+          <td><a href="/tournament.html" class="pname">Tournament Bracket</a></td>
+          <td class="pdesc">Bracket generator and tournament tracker</td>
+          <td><span class="ptag">APP</span></td>
+        </tr>
+        <tr>
+          <td><a href="/map.html" class="pname">Travel Map</a></td>
+          <td class="pdesc">Interactive Leaflet map tracking coordinates, distances, and location notes</td>
+          <td><span class="ptag">GEO</span></td>
+        </tr>
+        <tr>
+          <td><a href="https://github.com/waldmannly/Cholera-Modeling" class="pname">Cholera Modeling</a></td>
+          <td class="pdesc">Socioeconomic class-structured disease model for Haiti sanitation dynamics</td>
+          <td><span class="ptag">RESEARCH</span></td>
+        </tr>
+        <tr>
+          <td><a href="https://github.com/hfjtlab/LANDIS_Klamath_REU2018" class="pname">LANDIS Klamath</a></td>
+          <td class="pdesc">Forest fire response simulation for Northern California landscapes (Harvard REU)</td>
+          <td><span class="ptag">RESEARCH</span></td>
+        </tr>
+        <tr>
+          <td><a href="https://github.com/waldmannly/MCM-ProblemB-2018" class="pname">MCM 2018</a></td>
+          <td class="pdesc">COMAP Mathematical Contest — GDP-based language extinction model (Honorable Mention)</td>
+          <td><span class="ptag">RESEARCH</span></td>
+        </tr>
+        <tr>
+          <td><a href="https://github.com/waldmannly/Soundscape-Ecology-UCF" class="pname">Soundscape Ecology</a></td>
+          <td class="pdesc">Acoustic ecology research at UCF with Dr. Jonathan Beever</td>
+          <td><span class="ptag">RESEARCH</span></td>
+        </tr>
+        <tr>
+          <td><a href="https://github.com/waldmannly/RtutorialCMS" class="pname">R Workshop</a></td>
+          <td class="pdesc">R tutorial and workshop materials for the UCF Math Club</td>
+          <td><span class="ptag">COLLEGE</span></td>
+        </tr>
+        <tr>
+          <td><a href="https://github.com/waldmannly/Latex-Templates" class="pname">LaTeX Templates</a></td>
+          <td class="pdesc">LaTeX templates from a Math Club workshop</td>
+          <td><span class="ptag">COLLEGE</span></td>
+        </tr>
+        <tr>
+          <td><a href="https://github.com/ucfsigai/data-science" class="pname">SIGAI Lectures</a></td>
+          <td class="pdesc">Data science lectures and workshops for AI@UCF</td>
+          <td><span class="ptag">COLLEGE</span></td>
+        </tr>
+        <tr>
+          <td><a href="https://github.com/waldmannly/railbaron-lookuptables" class="pname">Rail Baron GUI</a></td>
+          <td class="pdesc">Java GUI helper app for the Rail Baron board game</td>
+          <td><span class="ptag">COLLEGE</span></td>
+        </tr>
+        <tr>
+          <td><a href="https://github.com/waldmannly/Games" class="pname">Games</a></td>
+          <td class="pdesc">Collection of one-off games programmed through college courses</td>
+          <td><span class="ptag">COLLEGE</span></td>
+        </tr>
+      </table>
+
+      <!-- Lab -->
+      <div class="sec-label fade-in">// lab experiments</div>
+      <hr class="sec-rule">
+
+      <div class="lab-grid reveal">
+        <a href="/cover-letter.html" class="lab-box">
+          <div class="num">01</div>
+          <div class="lname">Star Wars Crawl</div>
+          <div class="ldesc">My cover letter as a Star Wars opening crawl</div>
+        </a>
+        <a href="/hack.html" class="lab-box">
+          <div class="num">02</div>
+          <div class="lname">Hacker Terminal</div>
+          <div class="ldesc">Matrix-style 3D terminal with fake DNS lookups and file ops</div>
+        </a>
+        <a href="/rotten.html" class="lab-box">
+          <div class="num">03</div>
+          <div class="lname">Image Cropper & Sailing Boat</div>
+          <div class="ldesc">Croppie-based image cropper with an animated React sailing boat footer</div>
+        </a>
+      </div>
+
+      <!-- Contact -->
+      <div class="sec-label fade-in">// contact</div>
+      <hr class="sec-rule">
+
+      <div class="contact reveal">
+        <div class="row"><span class="k">Github</span> <a href="https://github.com/waldmannly">github.com/waldmannly</a></div>
+        <div class="row"><span class="k">LinkedIn</span> <a href="https://www.linkedin.com/in/evan-waldmann-492368149/">linkedin.com/in/evan-waldmann-492368149/</a></div>
+        <div class="row"><span class="k">Email</span> <a href="mailto:waldmannevan@gmail.com">waldmannevan@gmail.com</a></div>
+      </div>
 
 
-	<head>
-	<meta name="generator" content="Hugo 0.97.2" />
-		<meta name="description" content="Evan Waldmann is a person.">
-	<meta name="keywords" content="Evan Waldmann, Evan, Waldmann, Math, Computer Science, harvard, UCF,
-	University of Central Florida, Modeling, Programmer, Statistician, Data, Scientist, Data Scientist, Mentor,
-	STRONG Mentor, AI, Artifical Intelligence, Microsoft, Deloitte, azure, aws, coding, program, cool guy, orlando, orlando software,
-	altamonte, altamonte springs, nerd, fun, hire, me, hire this guy, vm, vm crud, sfmc, sfrp">
-		<title>Evan Waldmann</title>
-		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1" />
-		
-		<link rel="stylesheet" href="css/main.css" />
-		
-		
-    
-     <link rel="shortcut icon" type="image/x-icon" href="https://waldmannly.github.io/favicon.ico">
-     <link rel="icon" type="image/x-icon" href="https://waldmannly.github.io/favicon.ico">
-	
+      <!-- Footer -->
+      <div class="foot">
+        <span>&copy; 2026 Evan Waldmann</span>
+        <span>No frameworks · Plain HTML</span>
+        <span>Orlando, FL</span>
+      </div>
 
+    </div>
+  </div>
 
+</div>
 
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-CQ35F5G9FW"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-CQ35F5G9FW');
-
-	gtag("event", "view_page", { page: "splash_page" });
-</script>
-
-
-	</head>
-	<body class="loading">
-
-		<div id="wrapper">
-			<div id="bg" ></div>
-			<div id="particles-js"></div>
-			<script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
-			<script src="https://waldmannly.github.io/js/particles.js"></script>
-
-			<div id="overlay"></div>
-			<div id="main">
-
-				
-					<header id="header">
-
-
-
-						<br><br><br><br>
-						<div class="middle"><h1>Evan Waldmann</h1></div>
-						<p>Applied Mathematician &nbsp;&bull;&nbsp; Computer Scientist  &nbsp;&bull;&nbsp; Big Nerd</p>
-
-						<br>
-					
-						<h3><a href="https://waldmannly.github.io/about.html">About Me</a> &nbsp;&bull;&nbsp; <a href="https://waldmannly.github.io/projects.html">Projects/Experiences</a></h3>
-
-						<nav>
-							<ul>
-								
-								<li><a href="https://www.linkedin.com/in/evan-waldmann-492368149/" class="icon fa-linkedin"><span class="label">Linkedin</span></a></li>
-								
-								<li><a href="https://github.com/waldmannly" class="icon fa-github"><span class="label">Github</span></a></li>
-								
-								<li><a href="https://www.instagram.com/waldmannly/?hl=en" class="icon fa-instagram"><span class="label">Instagram</span></a></li>
-								
-								<li><a href="mailto:waldmannevan@gmail.com" class="icon fa-envelope-o"><span class="label">Email</span></a></li>
-								
-							</ul>
-						</nav>
-					</header>
-
-
-
-			</div>
-
-		</div>
-
-		
-		<script>
-			window.onload = function() { document.body.className = ''; }
-			window.ontouchmove = function() { return false; }
-			window.onorientationchange = function() { document.body.scrollTop = 0; }
-		</script>
-
-
-    
-	</body>
+<script src="effects.js"></script>
+</body>
 </html>
