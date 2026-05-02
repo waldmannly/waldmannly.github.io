@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Tracker</title>
+
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js" type="text/javascript"></script>
+
+        <link rel="stylesheet" href="https://unpkg.com/leaflet@1.8.0/dist/leaflet.css"
+        integrity="sha512-hoalWLoI8r4UszCkZ5kL8vayOGVae1oxXe/2A4AO6J9+580uKHDO3JdHb7NzwwzK5xr/Fs0W40kiNHxM9vyTtQ=="
+        crossorigin=""/>
+
+        <script src="https://unpkg.com/leaflet@1.8.0/dist/leaflet.js"
+        integrity="sha512-BB3hKbKWOc9Ez/TAwyWxNXeoV9c1v6FIeYiBieIWkpLjauysF18NzgR1MBNBXf8/KABdlkX68nAhlwcDFLGPCQ=="
+        crossorigin=""></script>
+
+        <link rel="stylesheet" href="./mapstyle.css">
+        <script  src="./mapscript.js"></script>
+
+
+        <!-- Global site tag (gtag.js) - Google Analytics -->
+        <script async src="https://www.googletagmanager.com/gtag/js?id=G-CQ35F5G9FW"></script>
+        <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'G-CQ35F5G9FW');
+        gtag("event", "view_page", { page: "map_page" });
+
+
+        /*
+        fetch('https://gorillawiz.com/get_coords', {
+        mode: 'no-cors',
+        method: 'GET'
+        })
+        .then(response => response.json())
+        .then(json => console.log(json))
+        .catch(error => console.log('Authorization failed : ' + error.message));
+        */
+
+        </script>
+    </head>
+
+    <body >
+        <div id="mapid" ></div>
+        <script>
+        var lat_coord = 24.62564;
+        var lon_coord = -82.87468; 
+        var map = L.map('mapid', {center: [lat_coord,lon_coord],zoom: 13});
+
+        L.tileLayer('http://{s}.tile.osm.org/{z}/{x}/{y}.png', {
+    attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OSM</a>'
+}).addTo(map);
+
+/*
+var marker = L.marker([24.6222, -82.87468]).addTo(map);
+
+
+var circle = L.circle([24.62, -82.89468], {
+    color: 'red',
+    fillColor: '#f03',
+    fillOpacity: 0.5,
+    radius: 500
+}).addTo(map);
+
+var polygon = L.polygon([
+    [24.62564, +0.08 -82.87468 -0.09],
+    [24.62064, +0.06 -82.87468 -0.09],
+    [24.5864, +0.047 -82.87468 -0.09]
+]).addTo(map);
+circle.bindPopup("I am a circle.");
+*/
+
+/*
+var popup1 = L.popup()
+    .setLatLng([24.62564, -82.87468])
+    .setContent("I am a standalone popup.")
+    .openOn(map);
+    // L.tileLayer.wms("http://mesonet.agron.iastate.edu/cgi-bin/wms/nexrad/n0r.cgi", {
+    // 	layers: 'nexrad-n0r-900913',
+    //     format: 'image/png',
+    //     transparent: true,
+    //     attribution: "Weather data © 2012 IEM Nexrad"
+    // }).addTo(map);
+    var popup = L.popup();
+    */
+
+function onMapClick(e) {
+    popup
+        .setLatLng(e.latlng)
+        .setContent("You clicked the map at " + e.latlng.toString())
+        .openOn(map);
+}
+
+map.on('click', onMapClick);
+
+
+
+var getJSON = function(url, callback) {
+            var xhr = new XMLHttpRequest();
+            xhr.open('GET', url, true);
+            xhr.responseType = 'json';
+            xhr.onload = function() {
+            var status = xhr.status;
+            if (status === 200) {
+                callback(null, xhr.response);
+            } else {
+                callback(status, xhr.response);
+            }
+            };
+            xhr.send();
+        };
+
+
+
+getJSON('https://gorillawiz.com/get_coords',
+function(err, data) 
+{
+    if (err !== null) {
+        //alert('Something went wrong: ' + err);
+        console.log("error occurred in webcall")
+    } 
+    else 
+    {
+        //alert('Your query count: ' + data.query.count);
+        //console.log(data.query.count)
+        //console.log(data.query)
+        console.log(data)
+        //data.sort(function(a,b){return a[0].localeCompare(b[0]);});
+        console.log(data)
+        var latlngs = Object.keys(data).map(function(key){
+            return data[key];
+        });
+        latlngs.sort(function(a,b){return a[0].localeCompare(b[0]);});
+        var latlngs2 = Object.keys(latlngs).map(function(key){
+            return [latlngs[key][1] , latlngs[key][2]];
+        });
+
+        /*var latlngs = [
+            [24.62564, -82.87468],
+            [24.52564, -80.87468],
+            [25.92564, -82.87468]
+        ];*/
+
+        console.log(latlngs);
+        console.log(latlngs2);
+
+        function fold(s, n, useSpaces, a) {
+            a = a || [];
+            if (s.length <= n) {
+                a.push(s);
+                return a;
+            }
+            var line = s.substring(0, n);
+            if (! useSpaces) { // insert newlines anywhere
+                a.push(line);
+                return fold(s.substring(n), n, useSpaces, a);
+            }
+            else { // attempt to insert newlines after whitespace
+                var lastSpaceRgx = /\s(?!.*\s)/;
+                var idx = line.search(lastSpaceRgx);
+                var nextIdx = n;
+                if (idx > 0) {
+                    line = line.substring(0, idx);
+                    nextIdx = idx;
+                }
+                a.push(line);
+                return fold(s.substring(nextIdx), n, useSpaces, a);
+            }
+        }
+
+        var distance =0; 
+        var count =0; 
+        for (var x in latlngs)
+        {
+            console.log(latlngs[x])
+            var marker = L.marker([latlngs[x][1], latlngs[x][2]]).addTo(map);
+            if (x>0){
+                var thisL = L.latLng(latlngs[x][1], latlngs[x][2])
+                var lastL = L.latLng(latlngs[x-1][1], latlngs[x-1][2])
+                distance += lastL.distanceTo(thisL)/1000
+                console.log(distance + " km")
+            }
+
+            //parseFloat("123.456").toFixed(2)
+            console.log([latlngs[x][1].toString() + " , "+ latlngs[x][2].toString()] + "\nNOTE: "+ latlngs[x][3].toString()+ "\n --- distance so far: " + distance + " km" + "\ntimestamp: " + latlngs[x][0].toString() )
+            var stringToShow = (["Coordinates: " + parseFloat(latlngs[x][1].toString()).toFixed(5) + " , "+ parseFloat(latlngs[x][2].toString()).toFixed(5)] + "<br/>Timestamp: " + latlngs[x][0].toString() + "<br/><br/>Location Note: "+  fold(latlngs[x][3].toString(), 50, true).join('<br/>')+ "<br/><br/>Unobstructed path distance: " + Math.round(distance*.621371) + " miles" )
+            
+            if (count == latlngs.length-1)
+            {
+                stringToShow = "----- NEWEST ENTRY -----<br/><br/>" + stringToShow
+            }
+
+                marker.bindTooltip(stringToShow).openTooltip();
+                count = count + 1; 
+        }
+
+
+        /*
+        var planned = [
+            [25.92564, -82.87468],
+            [26.2564, -82.87468],
+        ];
+
+        console.log(planned[planned.length-1])
+        var marker = L.marker([planned[planned.length-1][0], planned[planned.length-1][1]]).addTo(map);
+        var stringToShow = planned[planned.length-1][0].toString() + " .... "+ planned[planned.length-1][1].toString() + "\n We going here!"
+        marker.bindTooltip(stringToShow).openTooltip();
+        */
+
+        var polyline = L.polyline(latlngs2, {color: 'red', dashArray:"4 6", opacity: .75}).addTo(map);
+        //planned lines
+        //var polyline1 = L.polyline(planned, {color: 'blue', dashArray:"1", opacity: .75}).addTo(map);
+
+
+    map.on('zoomstart', function () {
+        var zoomLevel = map.getZoom();
+        var tooltip = $('.leaflet-tooltip');
+
+        console.log(zoomLevel)
+
+        switch (zoomLevel) {
+            case -2:
+                tooltip.css('font-size', 12);
+                break;
+            case -1:
+                tooltip.css('font-size', 14);
+                break;
+            case 0:
+                tooltip.css('font-size', 14);
+                break;
+            case 1:
+                tooltip.css('font-size', 16);
+                break;
+            case 2:
+                tooltip.css('font-size', 18);
+                break;
+            case 3:
+                tooltip.css('font-size', 20);
+                break;
+            default:
+                tooltip.css('font-size', 22);
+        }
+    });
+
+        // zoom the map to the polyline
+        map.fitBounds(polyline.getBounds());
+    }
+});
+
+
+
+
+        </script>
+    </body>
+</html>
+<!-- https://leafletjs.com/
+
+json formatting of the locations VVVV
+https://leafletjs.com/examples/geojson/
+
+
+
+svg
+https://leafletjs.com/reference.html#svg
+
+
+custom icons 
+https://leafletjs.com/examples/custom-icons/
+https://leafletjs.com/reference.html#icon
+
+
+
+to have layers for full and last like 10 or so and have a check box 
+https://leafletjs.com/examples/layers-control/
+-->
