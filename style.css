@@ -924,70 +924,76 @@ a:hover {
 /* === MOBILE === */
 
 @media (max-width: 640px) {
-  /* Keep sidebar on left, just narrower */
+  /* Stack layout — hide sidebar */
   .pipboy {
-    grid-template-columns: 40px 1fr;
+    grid-template-columns: 1fr;
   }
 
   .sidebar {
-    padding: 12px 0;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    top: auto;
+    height: auto;
+    flex-direction: row;
+    padding: 8px 16px;
+    border-right: none;
+    border-top: 2px solid var(--amber-dim);
+    z-index: 100;
+    gap: 8px;
+    justify-content: center;
   }
 
   .sidebar .name {
-    font-size: 9px;
-    letter-spacing: 4px;
+    writing-mode: horizontal-tb;
+    transform: none;
+    margin-bottom: 0;
+    flex: 0;
+    font-size: 10px;
+    letter-spacing: 3px;
   }
 
   .sidebar .dots {
-    flex-direction: column;
-    margin-top: 8px;
-  }
-
-  .sidebar .dot {
-    width: 5px;
-    height: 5px;
+    flex-direction: row;
+    margin-top: 0;
+    margin-left: 12px;
   }
 
   /* Main area */
   .main {
-    padding: 10px 10px 16px 10px;
+    padding: 12px 12px 60px 12px;
   }
 
   .screen-frame {
-    padding: 12px;
+    padding: 14px;
     border-radius: 8px;
   }
 
   .screen-frame::before {
-    font-size: 7px;
-    top: -7px;
-    left: 10px;
+    font-size: 8px;
+    top: -8px;
+    left: 12px;
   }
 
   /* Nav tabs */
   .tabs a {
-    font-size: 9px;
-    padding: 7px 2px;
+    font-size: 10px;
+    padding: 8px 4px;
     letter-spacing: 0;
   }
 
-  /* Hero — keep side by side */
+  /* Hero */
   .hero-block h2 {
-    font-size: 20px;
+    font-size: 22px;
   }
 
   .ascii-logo {
-    font-size: 8px;
-    letter-spacing: 1px;
+    display: none;
   }
 
   .hero-row {
-    flex-direction: row;
-    gap: 12px;
-  }
-
-  .hero-block .bio {
-    font-size: 11px;
+    flex-direction: column;
   }
 
   /* Status bar */
@@ -1108,33 +1114,34 @@ a:hover {
 
 @media (max-width: 640px) {
   .pipboy {
-    grid-template-columns: 40px 1fr;
+    grid-template-columns: 1fr;
   }
 
   .sidebar {
-    padding: 12px 0;
+    position: static;
+    height: auto;
+    border-right: none;
+    border-bottom: 2px solid var(--amber-dim);
+    flex-direction: row;
+    padding: 10px 16px;
+    justify-content: space-between;
   }
 
   .sidebar .name {
-    font-size: 9px;
+    writing-mode: horizontal-tb;
+    transform: none;
     letter-spacing: 4px;
+    font-size: 12px;
   }
 
   .sidebar .dots {
-    flex-direction: column;
+    flex-direction: row;
   }
 
-  .sidebar .dot {
-    width: 5px;
-    height: 5px;
-  }
-
-  .main { padding: 10px 10px 16px 10px; }
-  .screen-frame { padding: 12px; border-radius: 8px; }
-  .hero-block h2 { font-size: 20px; }
-  .tabs a { font-size: 9px; padding: 7px 2px; letter-spacing: 0; }
-  .ascii-logo { font-size: 8px; letter-spacing: 1px; }
-  .hero-row { flex-direction: row; gap: 12px; }
+  .main { padding: 16px; }
+  .screen-frame { padding: 16px; border-radius: 8px; }
+  .hero-block h2 { font-size: 22px; }
+  .tabs a { font-size: 10px; padding: 8px 4px; letter-spacing: 0; }
   .proj-table .idx { font-size: 20px; width: 32px; }
   .proj-table .pdesc { display: none; }
   .lab-grid { grid-template-columns: 1fr; }
